@@ -1,7 +1,5 @@
 # AUCTF-2020
 
-# CTF during Auburn's Hackathon 2020
-
 ## Categories
 
 ### OSINT: Charlie
