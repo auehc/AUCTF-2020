@@ -60,6 +60,15 @@
 * [ ]  Medium
 * [ ]  Hard
 
+
+### Pentesting: DeMarcus / Kensocolo
+
+* [ ]  Easy
+* [ ]  Easy
+* [ ]  Medium
+* [ ]  Medium
+* [ ]  Hard
+
 ### Forensics: Vincent
 
 * [ ]  Easy
