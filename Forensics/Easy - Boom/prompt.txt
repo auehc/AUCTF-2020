@@ -1,0 +1,1 @@
+Richard lost his picture in a mySQL table. Can you help him find it?

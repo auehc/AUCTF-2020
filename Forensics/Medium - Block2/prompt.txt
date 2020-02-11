@@ -1,0 +1,2 @@
+Billy runs a minecraft server. He wants to know which block was rolled back. Can you help him?
+Insert the unix timestamp into auctf{time_stamp}

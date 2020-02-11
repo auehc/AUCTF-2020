@@ -1,0 +1,6 @@
+Answer: 
+mysql -u root
+CREATE DATABASE temp;
+USE temp;
+source /path/to/database/file/block.sql
+SELECT * FROM `co_block` WHERE `rolled_back` = '1'
