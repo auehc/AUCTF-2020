@@ -59,7 +59,7 @@
 * [ ]  Hard
 
 
-### Pentesting: DeMarcus / Kensocolo
+### Pentesting: DeMarcus / Drew / Kensocolo
 
 * [ ]  Easy
 * [ ]  Easy
