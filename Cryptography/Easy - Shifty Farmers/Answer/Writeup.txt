@@ -1,0 +1,3 @@
+This is vignere cipher with a key value of 'gud'
+
+I did not reveal the key, because I want them to count coincidences and solve the problem manually.
