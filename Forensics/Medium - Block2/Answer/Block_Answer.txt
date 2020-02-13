@@ -2,5 +2,5 @@ Answer:
 mysql -u root
 CREATE DATABASE temp;
 USE temp;
-source /path/to/database/file/block.sql
-SELECT * FROM `co_block` WHERE `rolled_back` = '1'
+source /path/to/database/file/co_block.sql
+SELECT * FROM co_block WHERE rolled_back = 1
