@@ -5,7 +5,7 @@ Flag is hidden in white text with a substitution cipher
 You should try and CTRL+F { or } as ROT1-25 wouldn't change the brackets.
 That didn't work 
 
-You should then try ROT47.
+You should then try and encode {} or auctf with ROT47 and searching with that.
 ROT47 uses a larger set of characters from the common character encoding known as ASCII
 
 ROT47: 2F4E7L3FC?0E9603@@<DPP`PN
