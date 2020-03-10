@@ -10,9 +10,12 @@ the second is hard coded but backwards, and the third is obfuscated with an cust
 Very basic keygen where it takes in a number performs some arbitrary calculations on it and then
 forces it to fit within ASCII character 0x41 - 0x71
 
-## Resource Binary
-
 ## Encrypted Binary
+
+Crackme that has been encrypted with an xor cipher. The first step is for the user to decode the binary so they can run it.
+After that they have to crack the crackme.
+
+## Resource Binary
 
 ## Custom Packing
 
