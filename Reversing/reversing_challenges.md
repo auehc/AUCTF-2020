@@ -9,6 +9,8 @@ forces it to fit within ASCII character 0x41 - 0x71
 
 ## Resource Binary
 
+## Encrypted Binary
+
 ## Custom Packing
 
 ## Exception Flow Control
