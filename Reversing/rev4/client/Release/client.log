@@ -1,0 +1,6 @@
+﻿  client.c
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  Finished generating code
+  All 4 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  client.vcxproj -> \\vmware-host\Shared Folders\Documents\GitHub\AUCTF-2020\Reversing\rev4\Release\client.exe

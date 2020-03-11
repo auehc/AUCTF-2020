@@ -17,6 +17,9 @@ After that they have to crack the crackme.
 
 ## Resource Binary
 
+Users are given a file with a resource binary packed into it. If they pull the binary out they can see it is spinning up a connection with a socket.
+Unfortunately the flag is never received on the binaries side but can be recovered if using Wireshark.
+
 ## Custom Packing
 
 ## Exception Flow Control
