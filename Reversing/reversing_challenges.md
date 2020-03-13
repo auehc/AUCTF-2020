@@ -5,7 +5,6 @@
 Simple crackme program. Prompts users three times for different inputs. The first input is hardcoded in the binary,
 the second is hard coded but backwards, and the third is obfuscated with an custom xor encryption.
 
-
 ## Encrypted Binary
 
 Crackme that has been encrypted with an xor cipher. The first step is for the user to decode the binary so they can run it.
@@ -20,7 +19,6 @@ Unfortunately the flag is never received on the binaries side but can be recover
 
 Very basic keygen where it takes in a number performs some arbitrary calculations on it and then
 forces it to fit within ASCII character 0x41 - 0x71
-
 
 ## Exception Flow Control
 

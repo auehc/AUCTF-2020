@@ -15,6 +15,9 @@
 #define DEFAULT_BUFLEN 512
 #define DEFAULT_PORT "27015"
 
+int send_buf(SOCKET ClientSocket, char* buf);
+void clean_buffer(char* buffer);
+
 int __cdecl main(void) 
 {
     WSADATA wsaData;
@@ -92,34 +95,27 @@ int __cdecl main(void)
     // No longer need server socket
     closesocket(ListenSocket);
 
-    // Receive until the peer shuts down the connection
-    do {
+    // receive data from client
+    iResult = recv(ClientSocket, recvbuf, recvbuflen, 0);
+    clean_buffer(recvbuf);
+    printf("Received: %s\n", recvbuf);
+    
+    // send data to client
+    char *buf = "Ahh. I see you've found me...\n";
+    send_buf(ClientSocket, buf);
+    
+    // receive data from client
+    iResult = recv(ClientSocket, recvbuf, recvbuflen, 0);
+    clean_buffer(recvbuf);
+    printf("Received: %s\n", recvbuf);
 
-        iResult = recv(ClientSocket, recvbuf, recvbuflen, 0);
-        if (iResult > 0) {
-            printf("Bytes received: %d\n", iResult);
+    // send data to client
+    char *secret = "auctf{r3s0urc3_h4cK1Ng_1S_n3at0_1021}";
+    send_buf(ClientSocket, secret);
 
-            char* buf = "auctf{r3s0urc3_h4cK1nG_1982}";
-            iSendResult = send( ClientSocket, buf, strlen(buf), 0 );
-            if (iSendResult == SOCKET_ERROR) {
-                printf("send failed with error: %d\n", WSAGetLastError());
-                closesocket(ClientSocket);
-                WSACleanup();
-                return 1;
-            }
-            printf("Bytes sent: %d\n", iSendResult);
-        }
-        else if (iResult == 0)
-            printf("Connection closing...\n");
-        else  {
-            printf("recv failed with error: %d\n", WSAGetLastError());
-            closesocket(ClientSocket);
-            WSACleanup();
-            return 1;
-        }
-
-    } while (iResult > 0);
-
+    printf("Connection closing...\n");
+    
+    
     // shutdown the connection since we're done
     iResult = shutdown(ClientSocket, SD_SEND);
     if (iResult == SOCKET_ERROR) {
@@ -133,5 +129,25 @@ int __cdecl main(void)
     closesocket(ClientSocket);
     WSACleanup();
 
+    getchar();
     return 0;
+}
+
+int send_buf(SOCKET ClientSocket, char *buf) {
+    int iSendResult = send(ClientSocket, buf, (int) strlen(buf), 0);
+    if (iSendResult == SOCKET_ERROR) {
+        printf("send failed with error: %d\n", WSAGetLastError());
+        closesocket(ClientSocket);
+        WSACleanup();
+        return 1;
+    }
+    //printf("Bytes sent: %d\n", iSendResult);
+    return 0;
+}
+
+void clean_buffer(char* buffer) {
+    char* newline = strchr(buffer, -52);
+    if (newline) {
+        *newline = '\0';
+    }
 }

@@ -33,7 +33,7 @@ int check()
     fgets(buffer, BUFSIZ, stdin);
     remove_newline(buffer);
 
-    int size = strlen(buffer);
+    int size = (int) strlen(buffer);
 
     char *manip = malloc(size * sizeof(char));
 
@@ -75,7 +75,8 @@ int check()
 void print_flag()
 {
     char flag[BUFSIZ];
-    FILE *f = fopen("flag.txt", "r");
+    FILE* f;
+    fopen_s(&f, "flag.txt", "r");
     if (f == NULL)
     {
         printf("Too bad you can only run this exploit on the server...\n");
@@ -87,7 +88,7 @@ void print_flag()
 
 void remove_newline(char *buffer)
 {
-    int string_length = strlen(buffer);
+    int string_length = (int)strlen(buffer);
     if (buffer[string_length - 1] == '\n')
     {
         buffer[string_length - 1] = '\0';
