@@ -31,5 +31,5 @@ Perhaps uses other things that break disassemblers
 
 ## x86 Assembly
 
-## ARM Assembly
+## Interpreted Language
 
