@@ -1,0 +1,8 @@
+﻿  main.c
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+C:\Users\Jordan Sosnowski\source\repos\rev5\main.c(12): warning C4733: Inline asm assigning to 'FS:0': handler not registered as safe handler
+C:\Users\Jordan Sosnowski\source\repos\rev5\main.c(22): warning C4733: Inline asm assigning to 'FS:0': handler not registered as safe handler
+  All 5 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  rev5.vcxproj -> C:\Users\Jordan Sosnowski\source\repos\rev5\Release\rev5.exe
