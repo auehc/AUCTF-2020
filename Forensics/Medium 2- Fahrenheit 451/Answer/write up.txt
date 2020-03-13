@@ -1,11 +1,11 @@
-Open pcapng file in Wireshark,
+Open pacp file in Wireshark,
 Export Objects > SMB
 Save the PDF File
 Flag is hidden in white text with a substitution cipher
-You should try and CTRL+F { or } as ROT1-25 wouldn't change the brackets.
-That didn't work 
+You should try and CTRL+F { or } as the flag format is auctf{}
+That didn't work as ROT1-25 wouldn't change the brackets.
 
-You should then try and encode {} or auctf with ROT47 and searching with that.
+You should then try ROT47.
 ROT47 uses a larger set of characters from the common character encoding known as ASCII
 
 ROT47: 2F4E7L3FC?0E9603@@<DPP`PN
