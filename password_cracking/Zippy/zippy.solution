@@ -1,0 +1,22 @@
+zip2john zippy.zip > zippy.hash
+john --wordlist=rockyou.txt zippy.hash
+
+zip2john unzipme.zip > unzipme.hash
+john --wordlist=rockyou.txt unzipme.hash
+
+zip2john do_it_again.zip > do_it_again.hash
+john --wordlist=rockyou.txt do_it_again.hash
+
+zip2john again.zip > again.hash
+john --wordlist=rockyou.txt again.hash
+
+zip2john keep_going.zip > keep_going.hash
+john --wordlist=rockyou.txt keep_going.hash
+
+zip2john almost_there.zip > almost_there.hash
+john --wordlist=rockyou.txt almost_there.hash
+
+zip2john nice.zip > nice.hash
+john --wordlist=rockyou.txt nice.hash
+
+Open flag.txt
