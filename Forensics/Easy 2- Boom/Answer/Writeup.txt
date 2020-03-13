@@ -1,0 +1,4 @@
+Extract the .gz file to reveal a sql dump, inside the table there is a .7z file containing an image. Reassemble the 7z file
+extract the 7z file to reveal the image. Finally, decrease the brightness and increase the contrast of the image to reveal the flag.
+
+Flag: aubie{B00M_!!}

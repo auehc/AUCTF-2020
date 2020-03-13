@@ -1,0 +1,10 @@
+Extract initrd.gz
+Extract the cpio archive
+Flag is hidden as the 'cat' binary in /bin/ 
+cd /bin/ && cat ./cat
+siica{rul_nbkf_vsrnog_vx}
+https://github.com/chharles/AUCTF-2020/commits/master
+use the key.txt "soGJvcjTknXM" to solve the Vigenère cipher
+
+
+auctf{pls_dont_delete_me}
