@@ -36,10 +36,10 @@
 
 ### Reversing: Jordan / Kensocolo 
 
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
+* [x]  Easy
+* [x]  Easy
+* [x]  Medium
+* [x]  Medium
 * [ ]  Hard
 
 ### Pwn: Jordan / Kensoscolo
@@ -69,19 +69,19 @@
 
 ### Forensics: Vincent
 
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
+* [x]  Easy
+* [x]  Easy
+* [x]  Medium
+* [x]  Medium
+* [x]  Hard
 
 ### Password Cracking: Zach
 
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
+* [x]  Easy
+* [x]  Easy
+* [x]  Medium
+* [x]  Medium
+* [x]  Hard
 
 ### Physical: Charlie
 
