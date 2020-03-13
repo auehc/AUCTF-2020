@@ -1,0 +1,1 @@
+.\hashcat64.exe -a 0 -m 20 .\salty.hash .\rockyou.txt

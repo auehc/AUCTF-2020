@@ -1,0 +1,2 @@
+keepass2john manager.kdbx > manager.hash
+hashcat64 -a 3 -m 13400 manager.hash ?d?d?d?d?d?d
