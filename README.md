@@ -28,9 +28,9 @@
 
 ### BASH: DeMarcus
 
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
+* [x]  Easy
+* [x]  Easy
+* [x]  Medium
 * [ ]  Medium
 * [ ]  Hard
 
