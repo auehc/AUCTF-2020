@@ -17,13 +17,19 @@ Unfortunately the flag is never received on the binaries side but can be recover
 
 There is a misdirection in the original file. It contains a crackme which can be solved but results in no flag.
 
-## Intermediate Keygen
+## Intermediate Keygen 
 
 Very basic keygen where it takes in a number performs some arbitrary calculations on it and then
 forces it to fit within ASCII character 0x41 - 0x71
 
-## Exception Flow Control
+## Exception Flow Control 
 
 Crackme that uses exception flow control to obscure where the program goes. (page 344 PBA)
+Perhaps uses other things that break disassemblers
 
 ## Debug Trap Challenge
+
+## x86 Assembly
+
+## ARM Assembly
+
