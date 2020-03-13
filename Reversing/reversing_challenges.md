@@ -15,6 +15,8 @@ After that they have to crack the crackme.
 Users are given a file with a resource binary packed into it. If they pull the binary out they can see it is spinning up a connection with a socket.
 Unfortunately the flag is never received on the binaries side but can be recovered if using Wireshark.
 
+There is a misdirection in the original file. It contains a crackme which can be solved but results in no flag.
+
 ## Intermediate Keygen
 
 Very basic keygen where it takes in a number performs some arbitrary calculations on it and then
