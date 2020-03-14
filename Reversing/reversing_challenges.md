@@ -31,5 +31,8 @@ Perhaps uses other things that break disassemblers
 
 ## x86 Assembly
 
+Performs different mathematic operations that the user has to follow through. Will return a single number, that is the flag.
+
 ## Interpreted Language
 
+Runs through different hashing algorithms and the user has to crack the hashes

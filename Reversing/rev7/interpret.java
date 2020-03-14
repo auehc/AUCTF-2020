@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 import java.security.MessageDigest;
 
+// TODO: encrypt hashes so they decrypt, encrypt user input at runtime
+
 public class interpret {
     public static String hash_1 = "d5c67e2fc5f5f155dff8da4bdc914f41"; // masterchief
     public static String hash_2 = "264212deff89ade15661a59e7b632872d858f2c6"; // princesspeach
