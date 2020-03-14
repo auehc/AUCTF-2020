@@ -1,164 +1,103 @@
-// TODO: change to linux acceptable code
-#undef UNICODE
-
-#define WIN32_LEAN_AND_MEAN
-
-#include <windows.h>
-#include <winsock2.h>
-#include <ws2tcpip.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <unistd.h>
+#define MAX 8192
+#define PORT 27015
+#define SA struct sockaddr
 
-// Need to link with Ws2_32.lib
-#pragma comment(lib, "Ws2_32.lib")
-// #pragma comment (lib, "Mswsock.lib")
+void func(int sockfd);
 
-#define DEFAULT_BUFLEN 512
-#define DEFAULT_PORT "27015"
-
-int send_buf(SOCKET ClientSocket, char *buf);
-void clean_buffer(char *buffer);
-
-int __cdecl main(void)
+int main(void)
 {
-    WSADATA wsaData;
-    int iResult;
+    int sockfd, connfd;
+    unsigned int len;
+    struct sockaddr_in servaddr, cli;
 
-    SOCKET ListenSocket = INVALID_SOCKET;
-    SOCKET ClientSocket = INVALID_SOCKET;
-
-    struct addrinfo *result = NULL;
-    struct addrinfo hints;
-
-    char *recvbuf = calloc(DEFAULT_BUFLEN, sizeof(char));
-    int recvbuflen = DEFAULT_BUFLEN;
-
-    // Initialize Winsock
-    iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
-    if (iResult != 0)
+    // socket create and verification
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+    if (sockfd == -1)
     {
-        printf("WSAStartup failed with error: %d\n", iResult);
-        return 1;
+        printf("socket creation failed...\n");
+        exit(0);
     }
+    else
+        printf("Socket successfully created..\n");
+    bzero(&servaddr, sizeof(servaddr));
 
-    ZeroMemory(&hints, sizeof(hints));
-    hints.ai_family = AF_INET;
-    hints.ai_socktype = SOCK_STREAM;
-    hints.ai_protocol = IPPROTO_TCP;
-    hints.ai_flags = AI_PASSIVE;
+    // assign IP, PORT
+    servaddr.sin_family = AF_INET;
+    servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
+    servaddr.sin_port = htons(PORT);
 
-    // Resolve the server address and port
-    iResult = getaddrinfo(NULL, DEFAULT_PORT, &hints, &result);
-    if (iResult != 0)
+    // Binding newly created socket to given IP and verification
+    if ((bind(sockfd, (SA *)&servaddr, sizeof(servaddr))) != 0)
     {
-        printf("getaddrinfo failed with error: %d\n", iResult);
-        WSACleanup();
-        return 1;
+        printf("socket bind failed...\n");
+        exit(0);
     }
+    else
+        printf("Socket successfully binded..\n");
 
-    // Create a SOCKET for connecting to server
-    ListenSocket = socket(result->ai_family, result->ai_socktype, result->ai_protocol);
-    if (ListenSocket == INVALID_SOCKET)
+    // Now server is ready to listen and verification
+    if ((listen(sockfd, 5)) != 0)
     {
-        printf("socket failed with error: %ld\n", WSAGetLastError());
-        freeaddrinfo(result);
-        WSACleanup();
-        return 1;
+        printf("Listen failed...\n");
+        exit(0);
     }
+    else
+        printf("Server listening..\n");
+    len = sizeof(cli);
 
-    // Setup the TCP listening socket
-    iResult = bind(ListenSocket, result->ai_addr, (int)result->ai_addrlen);
-    if (iResult == SOCKET_ERROR)
+    // Accept the data packet from client and verification
+    connfd = accept(sockfd, (SA *)&cli, &len);
+    if (connfd < 0)
     {
-        printf("bind failed with error: %d\n", WSAGetLastError());
-        freeaddrinfo(result);
-        closesocket(ListenSocket);
-        WSACleanup();
-        return 1;
+        printf("server acccept failed...\n");
+        exit(0);
     }
+    else
+        printf("server acccept the client...\n");
 
-    freeaddrinfo(result);
-    printf("Listening..\n");
-    iResult = listen(ListenSocket, SOMAXCONN);
-    if (iResult == SOCKET_ERROR)
-    {
-        printf("listen failed with error: %d\n", WSAGetLastError());
-        closesocket(ListenSocket);
-        WSACleanup();
-        return 1;
-    }
+    // Function for chatting between client and server
+    func(connfd);
 
-    // Accept a client socket
-    ClientSocket = accept(ListenSocket, NULL, NULL);
-    if (ClientSocket == INVALID_SOCKET)
-    {
-        printf("accept failed with error: %d\n", WSAGetLastError());
-        closesocket(ListenSocket);
-        WSACleanup();
-        return 1;
-    }
+    // After chatting close the socket
+    close(sockfd);
+}
 
-    // No longer need server socket
-    closesocket(ListenSocket);
-
-    // receive data from client
-    iResult = recv(ClientSocket, recvbuf, recvbuflen, 0);
-
-    printf("Received: %s\n", recvbuf);
-    free(recvbuf);
-    recvbuf = calloc(DEFAULT_BUFLEN, sizeof(char));
-
-    // send data to client
-    char *buf = "Ahh. I see you've found me... here comes the flag :)\n";
-    send_buf(ClientSocket, buf);
-
-    // receive data from client
-    iResult = recv(ClientSocket, recvbuf, recvbuflen, 0);
-    printf("Received: %s\n", recvbuf);
-
-    // send data to client
+// Function designed for chat between client and server.
+void func(int sockfd)
+{
+    char *init = "Ahh. I see you've found me... here comes the flag :)\n";
     char *secret = "auctf{r3s0urc3_h4cK1Ng_1S_n3at0_1021}";
-    send_buf(ClientSocket, secret);
+    char recv[MAX];
+    int n;
+    // infinite loop for chat
 
-    printf("Connection closing...\n");
+    bzero(recv, MAX);
 
-    // shutdown the connection since we're done
-    iResult = shutdown(ClientSocket, SD_SEND);
-    if (iResult == SOCKET_ERROR)
-    {
-        printf("shutdown failed with error: %d\n", WSAGetLastError());
-        closesocket(ClientSocket);
-        WSACleanup();
-        return 1;
-    }
+    // read the message from client and copy it in buffer
+    read(sockfd, recv, sizeof(recv));
+    // print buffer which contains the client contents
+    printf("From client: %s\t To client : %s\n", recv, init);
+    bzero(recv, MAX);
+    n = 0;
 
-    // cleanup
-    closesocket(ClientSocket);
-    WSACleanup();
+    // and send that buffer to client
+    write(sockfd, init, strlen(init));
 
-    getchar();
-    return 0;
-}
+    read(sockfd, recv, sizeof(recv));
+    // print buffer which contains the client contents
+    printf("From client: %s\t To client : %s\n", recv, secret);
+    bzero(recv, MAX);
 
-int send_buf(SOCKET ClientSocket, char *buf)
-{
-    int iSendResult = send(ClientSocket, buf, (int)strlen(buf), 0);
-    if (iSendResult == SOCKET_ERROR)
-    {
-        printf("send failed with error: %d\n", WSAGetLastError());
-        closesocket(ClientSocket);
-        WSACleanup();
-        return 1;
-    }
-    //printf("Bytes sent: %d\n", iSendResult);
-    return 0;
-}
+    // send data to client
 
-void clean_buffer(char *buffer)
-{
-    char *newline = strchr(buffer, -52);
-    if (newline)
-    {
-        *newline = '\0';
-    }
+    // and send that buffer to client
+    write(sockfd, secret, strlen(secret));
 }

@@ -13,7 +13,7 @@
 
 #define DEFAULT_BUFLEN 512
 #define DEFAULT_PORT "27015"
-#define HOST "localhost"
+#define HOST "10.0.0.226"
 //#define HOST "ctf.auburn.edu"
 
 
