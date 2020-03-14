@@ -1,7 +1,7 @@
 #!/bin/bash
 
 x=$RANDOM
-
+echo "Input the random number."
 read input
 
 if [[ "$input" -eq "$x" ]]
