@@ -4,11 +4,11 @@
 
 ### OSINT: Charlie
 
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
+* [x]  Easy
+* [x]  Easy
+* [x]  Medium
+* [x]  Medium
+* [x]  Hard
 
 ### Crypto: Charlie
 
@@ -36,11 +36,14 @@
 
 ### Reversing: Jordan / Kensocolo 
 
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
+* [x]  Crackme
+* [x]  Encoded Binary
+* [x]  Interpreted
+* [x]  Resource
+* [x]  Keygen
+* [x]  Assembly
+* [ ]  Execution Flow
+* [ ]  Debug
 
 ### Pwn: Jordan / Kensoscolo
 
@@ -69,19 +72,19 @@
 
 ### Forensics: Vincent
 
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
+* [x]  Easy
+* [x]  Easy
+* [x]  Medium
+* [x]  Medium
+* [x]  Hard
 
 ### Password Cracking: Zach
 
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
+* [x]  Easy
+* [x]  Easy
+* [x]  Medium
+* [x]  Medium
+* [x]  Hard
 
 ### Physical: Charlie
 
