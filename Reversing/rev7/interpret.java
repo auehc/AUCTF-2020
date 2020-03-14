@@ -8,8 +8,11 @@ import java.security.MessageDigest;
 
 public class interpret {
     public static String hash_1 = "d5c67e2fc5f5f155dff8da4bdc914f41"; // masterchief
+    public static int key_1 = 117;
     public static String hash_2 = "264212deff89ade15661a59e7b632872d858f2c6"; // princesspeach
+    public static int key_2 = 64;
     public static String hash_3 = "5ebb49e499a6613e832e433a2722edd0d2947d56fdb4d684af0f06c631fdf633"; // solidsnake
+    public static int key_3 = 313;
 
     public static void main(String[] args) {
 
@@ -44,7 +47,6 @@ public class interpret {
             System.out.print(
                     "This next one you don't get to see, if you aren't already digging into the class file you may wanna try that out!\n\t");
             input = scanner.nextLine();
-
             if (hash(input, "SHA1").compareTo(hash_2) == 0) {
                 System.out.println("Nice work!");
 
@@ -61,6 +63,22 @@ public class interpret {
 
         scanner.close();
         return false;
+    }
+
+    private static int[] encrypt(String input, int key) {
+        int[] output = new int[input.length()];
+        for (int i = 0; i < input.length(); i++) {
+            output[i] = (input.charAt(i) ^ key);
+        }
+        return output;
+    }
+
+    private static String decrypt(int[] input, int key) {
+        String output = "";
+        for (int i = 0; i < input.length; i++) {
+            output += (input[i] ^ key);
+        }
+        return output;
     }
 
     private static void print_flag() {
