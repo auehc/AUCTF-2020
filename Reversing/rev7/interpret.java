@@ -40,41 +40,49 @@ public class interpret {
     }
 
     private static boolean crackme() {
+        Scanner scanner = new Scanner(System.in);
+        if (crack_1(scanner) && crack_2(scanner) && crack_3(scanner)) {
+            System.out.println("That's correct!");
+            scanner.close();
+            return true;
 
+        }
+        System.out.println("Nope that's not right!");
+        scanner.close();
+        return false;
+
+    }
+
+    private static boolean crack_1(Scanner scanner) {
         System.out.println(
                 "Let's try some hash cracking!! I'll go easy on you the first time. The first hash we are checking is this");
         System.out.println("\t" + secret_1);
         System.out.print("Think you can crack it? If so give me the value that hashes to that!\n\t");
 
-        Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
 
         String hash = hash(input, "MD5");
 
-        if (hash.compareTo(secret_1) == 0) {
-            System.out.println("Nice work! One to go ... many to come");
+        return hash.compareTo(secret_1) == 0;
+    }
 
-            System.out.print(
-                    "This next one you don't get to see, if you aren't already digging into the class file you may wanna try that out!\n\t");
-            input = scanner.nextLine();
-            if (hash(input, "SHA1").compareTo(decrypt(secret_2, key_2)) == 0) {
-                System.out.println("Nice work!");
+    private static boolean crack_2(Scanner scanner) {
+        System.out.println("Nice work! One down, two to go ...");
 
-                System.out.print("Alright last one...\n\t");
-                input = scanner.nextLine();
+        System.out.print(
+                "This next one you don't get to see, if you aren't already digging into the class file you may wanna try that out!\n\t");
+        String input = scanner.nextLine();
+        return hash(input, "SHA1").compareTo(decrypt(secret_2, key_2)) == 0;
 
-                String hash_3 = hash(input, "SHA-256");
-                int[] encrypt_3 = encrypt(hash_3, key_3);
-                if (Arrays.equals(encrypt_3, secret_3)) {
-                    System.out.println("That's correct!");
-                    scanner.close();
-                    return true;
-                }
-            }
-        }
+    }
 
-        scanner.close();
-        return false;
+    private static boolean crack_3(Scanner scanner) {
+        System.out.println("Nice work! Here's the last one...\n\t");
+        String input = scanner.nextLine();
+
+        String hash_3 = hash(input, "SHA-256");
+        int[] encrypt_3 = encrypt(hash_3, key_3);
+        return Arrays.equals(encrypt_3, secret_3);
     }
 
     private static int[] encrypt(String input, int key) {
@@ -82,7 +90,7 @@ public class interpret {
         // System.out.print("{");
         for (int i = 0; i < input.length(); i++) {
             output[i] = (input.charAt(i) ^ key);
-            System.out.print((int) output[i]);
+            // System.out.print((int) output[i]);
             // if (i + 1 < input.length()) {
             // System.out.print(", ");
             // }
