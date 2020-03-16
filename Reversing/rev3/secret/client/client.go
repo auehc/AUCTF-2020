@@ -7,8 +7,6 @@ import (
 	"os"
 )
 
-// NOTE: update with correct IP when ready
-const host = "192.168.1.35:27015" // host for connection
 const sendBuf = "hello can you hear me?"
 const requestFlag = "can i have the flag?"
 
