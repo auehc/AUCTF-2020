@@ -8,7 +8,8 @@ the second is hard coded but backwards, and the third is obfuscated with an cust
 ## Encrypted Binary
 
 Crackme that has been encrypted with an xor cipher. The first step is for the user to decode the binary so they can run it.
-After that they have to crack the crackme.
+After that they have to crack the crackme, this is encrypted with an XOR that has a rotating key.
+URL and port is not given in prompt.
 
 ## Resource Binary
 
@@ -16,6 +17,7 @@ Users are given a file with a resource binary packed into it. If they pull the b
 Unfortunately the flag is never received on the binaries side but can be recovered if using Wireshark.
 
 There is a misdirection in the original file. It contains a crackme which can be solved but results in no flag.
+Misdirection crackme has an transpostion cipher.
 
 ## Intermediate Keygen
 
@@ -35,4 +37,4 @@ Performs different mathematic operations that the user has to follow through. Wi
 
 ## Interpreted Language
 
-Runs through different hashing algorithms and the user has to crack the hashes
+Runs through different hashing algorithms and the user has to crack the hashes, some are XOR encrypted.
