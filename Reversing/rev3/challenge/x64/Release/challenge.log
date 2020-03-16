@@ -1,6 +1,0 @@
-﻿  resource.c
-  Generating code
-  Previous IPDB not found, fall back to full compilation.
-  All 7 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Finished generating code
-  challenge.vcxproj -> \\vmware-host\Shared Folders\Documents\GitHub\AUCTF-2020\Reversing\rev3\challenge\x64\Release\challenge.exe
