@@ -10,10 +10,6 @@ int main()
 {
     printf("Welcome to The Vault!\n\n\tThis challenge is simple answer the questions right and you get the flag!\n");
 
-    printf("\tI have to warn you thought.... you are looking in the wrong place\n");
-
-    printf("\n\n\tWell ... if you are still here lets start! Just don't get mad at me when you waste your time!\n");
-
     if (check() == 1)
     {
         printf("\tNice job!\n");
@@ -33,7 +29,7 @@ int check()
     fgets(buffer, BUFSIZ, stdin);
     remove_newline(buffer);
 
-    int size = (int) strlen(buffer);
+    int size = (int)strlen(buffer);
 
     char *manip = malloc(size * sizeof(char));
 
@@ -68,14 +64,14 @@ int check()
         manip[i] = buffer[j];
         j++;
     }
-
+    //TODO: update key
     return strcmp(manip, "hello!") == 0;
 }
 
 void print_flag()
 {
     char flag[BUFSIZ];
-    FILE* f;
+    FILE *f;
     fopen_s(&f, "flag.txt", "r");
     if (f == NULL)
     {
