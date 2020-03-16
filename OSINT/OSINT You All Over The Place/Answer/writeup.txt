@@ -1,0 +1,8 @@
+This challenge has the investigator look for the flag in social media accounts associated with the website 'http://devs-r-us.xyz'.
+First, the investigator must look through the ICANN information about the website to find the information associated with one one the website administrators: Shannon Engrid
+
+Next, the investigator must look through social media accounts to find the a picture of the flag on their Instagram webpage.
+
+Finally, the investigator has to pull the text from the image to get the flag:
+
+auctf{7sbhww4yt0g00Nf1nd1nGth3fl4G}

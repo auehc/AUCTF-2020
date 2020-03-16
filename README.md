@@ -4,8 +4,8 @@
 
 ### OSINT: Charlie
 
-* [ ]  Easy
-* [ ]  Easy
+* [X]  Easy
+* [X]  Easy
 * [ ]  Medium
 * [ ]  Medium
 * [ ]  Hard
