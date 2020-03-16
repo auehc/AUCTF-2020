@@ -50,7 +50,7 @@ END
 // binary
 //
 
-IDR_BINARY1             binary                  "\\\\vmware-host\\Shared Folders\\Documents\\GitHub\\AUCTF-2020\\Reversing\\rev3\\secret\\Release\\client.exe"
+IDR_BINARY1             binary                  "\\\\vmware-host\\Shared Folders\\Documents\\GitHub\\AUCTF-2020\\Reversing\\rev3\\secret\\client\\client.exe"
 
 #endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
