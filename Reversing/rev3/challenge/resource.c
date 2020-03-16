@@ -26,15 +26,21 @@ int check()
     printf("\tYou know the drill, give me some input and I'll tell you if it's right\n");
     printf("\n\t");
     char buffer[BUFSIZ];
+
+    // lmo_ewce_j!eo_tulgneht
     fgets(buffer, BUFSIZ, stdin);
     remove_newline(buffer);
 
     int size = (int)strlen(buffer);
 
-    char *manip = malloc(size * sizeof(char));
+    char *manip =  calloc(size+1, sizeof(char));
+    if (manip == NULL) {
+         printf("Error: out of memory\n");
+         exit(1);
+    }
 
     int j = 0;
-    for (int i = 0, k = 0; i < size; i += 2 + k)
+    for (int i = j, k = 0; i < size; i += 2 + k)
     {
         if (i == 0)
         {
@@ -45,27 +51,43 @@ int check()
         k++;
     }
 
-    for (int i = j + 1; i >= 0; i -= 3)
+    for (int i = 0, k = 0; i < size; i += 2 + k)
     {
-        if (i > size)
-        {
-            continue;
-        }
-        manip[i] = buffer[j];
-        j++;
+         if (i == 0)
+         {
+              manip[i] = buffer[j];
+              j++;
+              i++;
+              continue;
+         }
+         manip[i] = buffer[j];
+         j++;
+         k++;
     }
 
-    for (int i = j - 3; i < size; i += 3)
-    {
-        if (i < 0)
-        {
-            continue;
-        }
-        manip[i] = buffer[j];
-        j++;
+    for (int i = 1, k = 0; i < size; i += 3 + k) {
+         if (i >= 7) {
+              k++;
+         }
+
+         manip[i] = buffer[j];
+         j++;
     }
-    //TODO: update key
-    return strcmp(manip, "hello!") == 0;
+
+
+    for (int i = strlen(buffer) - 3, count = 3, k = 0; j < strlen(buffer); i--, count--) {
+         if (count == 0) {
+              i -= 3;
+              k++;
+              count = (3-k);
+         }
+
+         manip[i] = buffer[j];
+         j++;
+     }
+
+     
+    return strcmp(manip, "welcome_to_the_jungle!") == 0;
 }
 
 void print_flag()
