@@ -6,9 +6,9 @@
 
 * [X]  Easy
 * [X]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
+* [X]  Medium
+* [X]  Medium
+* [X]  Hard
 
 ### Crypto: Charlie
 
@@ -31,8 +31,8 @@
 * [x]  Easy
 * [x]  Easy
 * [x]  Medium
-* [ ]  Medium
-* [ ]  Hard
+* [x]  Medium
+* [x]  Hard
 
 ### Reversing: Jordan / Kensocolo 
 
@@ -85,11 +85,11 @@
 
 ### Physical: Charlie
 
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
+* [x]  Easy
+* [x]  Easy
+* [x]  Medium
+* [x]  Medium
+* [x]  Hard
 
 ### Signal: Drew
 
