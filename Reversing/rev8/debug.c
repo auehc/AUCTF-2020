@@ -1,199 +1,129 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-#include <math.h>
+#include <string.h>
 
-int e, d, n;
+void print_flag();
+void remove_newline(char *buffer);
+int blah[] = {88, 65, 80, 82, 77, 88, 67, 83, 66, 67, 69, 68, 73, 83, 66, 86, 88, 73, 83, 88, 87, 69, 82, 74, 82, 87, 83, 90, 65, 82, 83, 81};
+char *encrypt(const char const *msg, const int a, const int b);
+char *decrypt(const char const *cipher, const int a, const int b);
+int inverse(const int a);
+void get_string(char *buffer);
 
-int gcd(int a, int b)
-{
-    int q, r1, r2, r;
-
-    if (a > b)
-    {
-        r1 = a;
-        r2 = b;
-    }
-    else
-    {
-        r1 = b;
-        r2 = a;
-    }
-
-    while (r2 > 0)
-    {
-        q = r1 / r2;
-        r = r1 - q * r2;
-        r1 = r2;
-        r2 = r;
-    }
-
-    return r1;
-}
-
-int PrimarityTest(int a, int i)
-{
-    int n = i - 1;
-    int k = 0;
-    int j, m, T;
-
-    while (n % 2 == 0)
-    {
-        k++;
-        n = n / 2;
-    }
-
-    m = n;
-    T = FindT(a, m, i);
-
-    if (T == 1 || T == i - 1)
-        return 1;
-
-    for (j = 0; j < k; j++)
-    {
-        T = FindT(T, 2, i);
-        if (T == 1)
-            return 0;
-        if (T == i - 1)
-            return 1;
-    }
-    return 0;
-}
-
-int FindT(int a, int m, int n)
-{
-    int r;
-    int y = 1;
-
-    while (m > 0)
-    {
-        r = m % 2;
-        FastExponention(r, n, &y, &a);
-        m = m / 2;
-    }
-    return y;
-}
-
-int FastExponention(int bit, int n, int *y, int *a)
-{
-    if (bit == 1)
-        *y = (*y * (*a)) % n;
-
-    *a = (*a) * (*a) % n;
-}
-
-int inverse(int a, int b)
-{
-    int inv;
-    int q, r, r1 = a, r2 = b, t, t1 = 0, t2 = 1;
-
-    while (r2 > 0)
-    {
-        q = r1 / r2;
-        r = r1 - q * r2;
-        r1 = r2;
-        r2 = r;
-
-        t = t1 - q * t2;
-        t1 = t2;
-        t2 = t;
-    }
-
-    if (r1 == 1)
-        inv = t1;
-
-    if (inv < 0)
-        inv = inv + a;
-
-    return inv;
-}
-
-int KeyGeneration()
-{
-    int p, q;
-    int phi_n;
-
-    do
-    {
-        do
-            p = rand();
-        while (p % 2 == 0);
-
-    } while (!PrimarityTest(2, p));
-
-    do
-    {
-        do
-            q = rand();
-        while (q % 2 == 0);
-    } while (!PrimarityTest(2, q));
-
-    n = p * q;
-    phi_n = (p - 1) * (q - 1);
-
-    do
-        e = rand() % (phi_n - 2) + 2; // 1 < e < phi_n
-    while (gcd(e, phi_n) != 1);
-
-    d = inverse(phi_n, e);
-}
-
-int Encryption(int value, FILE *out)
-{
-    int cipher;
-    cipher = FindT(value, e, n);
-    fprintf(out, "%d ", cipher);
-}
-
-int Decryption(int value, FILE *out)
-{
-    int decipher;
-    decipher = FindT(value, d, n);
-    fprintf(out, "%c", decipher);
-}
-
+//TODO: add anti debug
 int main(void)
 {
-    FILE *inp, *out;
+    // char *msg = "IKILLWITHMYHEART";
+    // char *mlsg = "SASRRWSXBIEBCMPX";
 
-    KeyGeneration();
+    const int a = 17;
+    const int b = 12;
 
-    char test[] = "test";
-    // encryption starts
-    for (int i = 0; i < strlen(test); i++)
+    char buf[BUFSIZ];
+    fgets(buf, BUFSIZ, stdin);
+    remove_newline(buf);
+
+    char *cipherText = encrypt(buf, a, b);
+
+    char *msg = calloc(sizeof(blah) / sizeof(int), sizeof(int));
+    get_string(msg);
+
+    if (strcmp(msg, cipherText) == 0)
     {
-        char ch = test[i];
-        int t = (int)ch;
-        int value = toascii(ch);
-        Encryption(value, out);
+        print_flag();
     }
-
-    fclose(inp);
-    fclose(out);
-
-    // decryption starts
-    inp = fopen("cipher.txt", "r");
-    if (inp == NULL)
-    {
-        printf("Error opening Cipher Text.\n");
-        exit(1);
-    }
-
-    out = fopen("decipher.txt", "w+");
-    if (out == NULL)
-    {
-        printf("Error opening File.\n");
-        exit(1);
-    }
-
-    while (1)
-    {
-        int cip;
-        if (fscanf(inp, "%d", &cip) == -1)
-            break;
-        Decryption(cip, out);
-    }
-    fclose(out);
-
     return 0;
+}
+
+void get_string(char *buffer)
+{
+    for (int j = 0, i = 0; i < (sizeof(blah) / sizeof(int)); i++)
+    {
+        if (i % 2 == 0)
+        {
+            buffer[((sizeof(blah) / sizeof(int)) / 2) - 1 - j] = (char)blah[i];
+            j++;
+        }
+    }
+}
+
+void print_flag()
+{
+    char flag[BUFSIZ];
+    FILE *f = fopen("flag.txt", "r");
+    if (f == NULL)
+    {
+        printf("Too bad you can only run this exploit on the server...\n");
+        exit(0);
+    }
+    fgets(flag, BUFSIZ, f);
+    printf("%s", flag);
+}
+void remove_newline(char *buffer)
+{
+    int string_length = strlen(buffer);
+    if (buffer[string_length - 1] == '\n')
+    {
+        buffer[string_length - 1] = '\0';
+    }
+}
+char *encrypt(const char const *msg, const int a, const int b)
+{
+    ///Cipher Text initially empty
+    char *cipher = calloc(strlen(msg), sizeof(char));
+    for (int i = 0; i < strlen(msg); i++)
+    {
+        // Avoid space to be encrypted
+        if (msg[i] != ' ')
+            // ax * b mod 26
+            cipher[i] =
+                (char)((((a * (msg[i] - 'A')) + b) % 26) + 'A');
+        else
+        {
+            cipher[i] = msg[i];
+        }
+    }
+    return cipher;
+}
+
+char *decrypt(const char const *cipher, const int a, const int b)
+{
+    char *msg = calloc(strlen(cipher), sizeof(char));
+    int a_inv = inverse(a);
+    for (int i = 0; i < strlen(cipher); i++)
+    {
+        if (cipher[i] != ' ')
+            // a^1 ( x - b) mod 26
+            msg[i] =
+                (char)(((a_inv * ((cipher[i] + 'A' - b)) % 26)) + 'A');
+        else
+        {
+
+            msg[i] = cipher[i];
+        }
+    }
+
+    return msg;
+}
+
+int inverse(const int a)
+{
+    int a_inv = 0;
+    int flag = 0;
+
+    //Find a^-1 (the multiplicative inverse of a
+    //in the group of integers modulo m.)
+    for (int i = 0; i < 26; i++)
+    {
+        flag = (a * i) % 26;
+
+        //Check if (a*i)%26 == 1,
+        //then i will be the multiplicative inverse of a
+        if (flag == 1)
+        {
+            a_inv = i;
+        }
+    }
+
+    return a_inv;
 }
