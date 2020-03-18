@@ -4,18 +4,57 @@
 
 void print_flag();
 void remove_newline(char *buffer);
-int blah[] = {88, 65, 80, 82, 77, 88, 67, 83, 66, 67, 69, 68, 73, 83, 66, 86, 88, 73, 83, 88, 87, 69, 82, 74, 82, 87, 83, 90, 65, 82, 83, 81};
+int blah[] = {88, 65, 80, 82, 77, 88, 67, 83, 66, 67, 69, 68, 73, 83, 66, 86,
+              88, 73, 83, 88, 87, 69, 82, 74, 82, 87, 83, 90, 65, 82, 83, 81};
 char *encrypt(const char const *msg, const int a, const int b);
 char *decrypt(const char const *cipher, const int a, const int b);
 int inverse(const int a);
 void get_string(char *buffer);
+void DebuggerDetected();
 
-//TODO: add anti debug
+void debugger_check()
+{
+    asm(".intel_syntax noprefix");
+    // asm("mov ecx, 0x500");
+    // asm("mov eax, 0xcc");
+    // asm("call $+5");
+    // asm("pop edi");
+    // asm("sub edi, 5");
+    // asm("repne scasb");
+    // asm("jz DebuggerDetected");
+
+    asm("mov ecx, 0x400;");
+    asm("mov eax, 0xcc;");
+    asm("call $+5");
+    asm("pop edi;");
+    asm("sub edi, 5;"); /* Get address and )size of block we want to check against breakpoint*/
+
+    /* Loop trough the code looking for breakpoint */
+
+    asm("antiBpLoop:");
+    // Check if the opcode is 0xCC
+
+    asm("cmp byte ptr[edi], al;");
+    // asm("push edi");
+    // asm("call printf");
+    asm("jz DebuggerDetected;"); // Debugger detected!!
+
+    asm("inc edi;");
+    asm("dec ecx;");
+    asm("jnz antiBpLoop;");
+}
+void DebuggerDetected()
+{
+    printf("BAD\n");
+    exit(1);
+}
+
 int main(void)
 {
+    printf("welcome\n");
     // char *msg = "IKILLWITHMYHEART";
     // char *mlsg = "SASRRWSXBIEBCMPX";
-
+    debugger_check();
     const int a = 17;
     const int b = 12;
 
@@ -37,6 +76,8 @@ int main(void)
 
 void get_string(char *buffer)
 {
+
+    debugger_check();
     for (int j = 0, i = 0; i < (sizeof(blah) / sizeof(int)); i++)
     {
         if (i % 2 == 0)
@@ -49,6 +90,7 @@ void get_string(char *buffer)
 
 void print_flag()
 {
+    debugger_check();
     char flag[BUFSIZ];
     FILE *f = fopen("flag.txt", "r");
     if (f == NULL)
@@ -61,6 +103,7 @@ void print_flag()
 }
 void remove_newline(char *buffer)
 {
+    debugger_check();
     int string_length = strlen(buffer);
     if (buffer[string_length - 1] == '\n')
     {
@@ -69,6 +112,7 @@ void remove_newline(char *buffer)
 }
 char *encrypt(const char const *msg, const int a, const int b)
 {
+    debugger_check();
     ///Cipher Text initially empty
     char *cipher = calloc(strlen(msg), sizeof(char));
     for (int i = 0; i < strlen(msg); i++)
@@ -88,6 +132,7 @@ char *encrypt(const char const *msg, const int a, const int b)
 
 char *decrypt(const char const *cipher, const int a, const int b)
 {
+    debugger_check();
     char *msg = calloc(strlen(cipher), sizeof(char));
     int a_inv = inverse(a);
     for (int i = 0; i < strlen(cipher); i++)
@@ -108,6 +153,7 @@ char *decrypt(const char const *cipher, const int a, const int b)
 
 int inverse(const int a)
 {
+    debugger_check();
     int a_inv = 0;
     int flag = 0;
 
