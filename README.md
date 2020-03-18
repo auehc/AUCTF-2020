@@ -43,7 +43,7 @@
 * [x]  Keygen
 * [x]  Assembly
 * [ ]  Execution Flow
-* [ ]  Debug
+* [x]  Debug
 
 ### Pwn: Jordan / Kensoscolo
 
