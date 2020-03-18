@@ -34,7 +34,7 @@
 * [ ]  Medium
 * [ ]  Hard
 
-### Reversing: Jordan / Kensocolo 
+### Reversing: Jordan / Kensocolo
 
 * [x]  Crackme
 * [x]  Encoded Binary
