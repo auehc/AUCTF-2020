@@ -26,4 +26,6 @@ rop chain
 
 ## pwn8
 
-??
+table of functions to jump to. takes in user input to pick but doesnt do bounds checking
+there's one function that loads the flag into memory, you have to cause the flag once loaded
+to be dumped out
