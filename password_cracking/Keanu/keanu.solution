@@ -2,8 +2,8 @@ cewl -d 0 -w keanu.list https://en.wikipedia.org/wiki/Keanu_Reeves
 
 In Mentalist:
 Use keanu.list as base
+Append years
 Substitute (all at once) o->0, s->$, a->@
-Append special character !
 Generate final list, mine was called keanu.dict
 
 hashcat -m 0 -a 0 keanu.hash keanu.dict
