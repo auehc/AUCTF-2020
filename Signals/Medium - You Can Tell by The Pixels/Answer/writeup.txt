@@ -1,0 +1,4 @@
+The .wav file contains an image encoded with 8PSK500.
+The link in the prompt can help with identifying the mode being used.
+Along with decoding the transmission, FLDIGI and FLAMP are required to handle saving the file.
+The file is a .png image that contains a bad drawing of the flag: auctf{M5_PANT}
