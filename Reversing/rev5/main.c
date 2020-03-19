@@ -1,10 +1,49 @@
 #include <stdio.h>
+#include "commandline.h"
 
-void print_t() {
-
-	printf("hi\n");
+void print_t()
+{
 	_asm {
-		
+		xor eax,eax
+		jz valid
+		__asm __emit(0xea)
+
+		valid:
+		mov eax, 0
+          sub esp, 0x20
+          mov [esp], 'a'
+          mov [esp+1], 'u'
+          mov [esp+2], 'c'
+          mov [esp+3], 't'
+          mov [esp+4], 'f'
+          mov [esp+5], '{'
+          mov [esp+6], 'o'
+          mov [esp+7], 'o'
+          mov [esp+8], 'p'
+          mov [esp+9], 's'
+          mov [esp+10], '_'
+          mov [esp+11], 'd'
+          mov [esp+12], 'i'
+          mov [esp+13], 'd'
+          mov [esp+14], '_'
+          mov [esp+15], 'i'
+          mov [esp+16], '_'
+          mov [esp+17], 'd'
+          mov [esp+18], 'o'
+          mov [esp+19], '_'
+          mov [esp+20], 't'
+          mov [esp+21], 'h'
+          mov [esp+22], 't'
+          mov [esp+23], '}'
+          mov [esp+24], '\n'
+          mov [esp+25], 0x0
+          push esp
+          call printf
+ 
+	}
+	//printf("hi\n");
+	_asm {
+
 		mov esp, [esp+8]
 		mov eax, fs:[0]
 		mov eax, [eax]
@@ -12,22 +51,25 @@ void print_t() {
 		mov fs:[0], eax
 		add esp, 8
 	}
-	
 }
 
-int main() {
+int main()
+{
 	_asm {
 		push print_t
 		push fs:[0]
 		mov fs:[0], esp
-		xor ecx, ecx
-		div ecx
-	}
-	printf("Welcome to my program!\n");
-	char buffer[BUFSIZ];
-	fgets(buffer, BUFSIZ, stdin);
 
-	if (strcmp(buffer, "secret") == 0) {
-		printf("yay");
 	}
+
+	printf("Welcome to my program!\n");
+     
+     printf("I've got a secret hidden within me!\nLet's see if you can find it!\n\n");
+
+     printf("May main functionality is a calculator... unfortunately my programmer hasn't fleshed me out just yet!\n");
+
+     commandline();
+
+
+ 
 }
