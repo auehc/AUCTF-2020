@@ -1,11 +1,7 @@
 #Easy - Extraordinary
-import random
 import sys
 
-simple_xor_flag = "auctf{n3v3R_r3Us3_y0uR_0Tp_872vc8972}"
-SEED = 0
-MIN_BYTE_SIZE = 0
-MAX_BYTE_SIZE = 127
+OTP = [97, 117, 99, 116, 102, 123, 110, 51, 118, 51, 82, 95, 114, 51, 85, 115, 51, 95, 121, 48, 117, 82, 95, 48, 84, 112, 95, 56, 55, 50, 118, 99, 56, 57, 55, 50, 125]
 
 def xor(letter, key):
     xorred=0
@@ -15,18 +11,18 @@ def xor(letter, key):
         xorred = key ^ ord(letter)
     return xorred
 
-def encrypt(msg, seed):
-    random.seed(seed)
+def encrypt(msg, seed=None):
     c = b''
+    key_index = 0
     for letter in msg:
-        rand_int = random.randint(MIN_BYTE_SIZE,MAX_BYTE_SIZE)
-        y = xor(letter, rand_int)
+        y = xor(letter, OTP[(key_index % len(OTP))])
         c += y.to_bytes((y.bit_length() + 7) // 8, byteorder='big')
+        key_index += 1
     return c
 
 def main():
     msg = input("> ")
-    print(encrypt(msg, SEED))
+    print(encrypt(msg))
 
 
 if __name__ == "__main__":

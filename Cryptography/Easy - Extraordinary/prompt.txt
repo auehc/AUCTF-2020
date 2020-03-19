@@ -1,5 +1,3 @@
-go here for more information:
+On their way back from the market, Alice and Bob noticed an little device on the ground. Next to it was a piece of paper with what looked like a bunch of scrambled numbers on it. It looked completely random. They took it to the lost and found, but on their way they played with it a little bit, don't tell anyone. The device was never picked up, so we get to play with it. Can you figure out how the device works?
 
-...
-
-b'\x03\x1ei6\x1a\x1c#I-\x04q\x17Q+\x15V|Fkd\rK\x05_\x04D%Iu=ut^9IgC'
+ssh ctf.auburn.edu -p 7777
