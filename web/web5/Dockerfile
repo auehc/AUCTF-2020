@@ -1,16 +1,12 @@
-from php:7.0-apache
+from ubuntu:latest
 
-run mkdir /var/www/html/cgi-bin
-copy .htaccess /var/www/html
-copy index.html /var/www/html
-copy myscript /var/www/html/cgi-bin
-
-run service apache2 start && echo "<Directory /var/www/html>" >> /etc/apache2/sites-available/000-default.conf && \
-  echo "Options Indexes FollowSymLinks" >> /etc/apache2/sites-available/000-default.conf && \
-  echo "AllowOverride All" >> /etc/apache2/sites-available/000-default.conf && \
-  echo "Require all granted" >> /etc/apache2/sites-available/000-default.conf && \
-  echo "</Directory>" >> /etc/apache2/sites-available/000-default.conf && \
-  echo "ScriptAlias \"/cgi-bin/\" \"/var/www/html/cgi-bin/\"" >> /etc/apache2/sites-available/000-default.conf && \
-  a2enmod rewrite && service apache2 restart && chmod 755 /var/www/html && chmod 755 /var/www/html/*
-run chmod +x /var/www/html/cgi-bin/*
+copy flag flag.file
+run apt-get update -y && apt-get install -y apache2 wget gcc make && a2enmod cgi && \
+  wget https://ftp.gnu.org/gnu/bash/bash-4.3.tar.gz && mv bash-4.3.tar.gz /opt/
+workdir /opt/
+run tar -xvf /opt/bash-4.3.tar.gz
+workdir /opt/bash-4.3
+run ls -al && ./configure && make && ln -sf /opt/bash-4.3/bash /bin/bash_shellshock
+copy myscript /usr/lib/cgi-bin/myscript.sh
+entrypoint service apache2 start && /bin/bash
 expose 80

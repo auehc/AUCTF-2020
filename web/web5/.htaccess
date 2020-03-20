@@ -1,2 +1,2 @@
 Options +ExecCGI
-SetHandler cgi-bin
+SetHandler cgi-script .sh

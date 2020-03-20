@@ -1,5 +1,5 @@
-#!/bin/bash
+#!/bin/bash_shellshock
 
-echo "Content-type: text/html\n\n"
-base64 <<< "Do you know shell shock"
-curl https://www.youtube.com/watch?v=dQw4w9WgXcQ
+echo -e "Content-type: text/html\n\n"
+base64 <<< "Do you know shell shock?"
+
