@@ -7,6 +7,6 @@ workdir /opt/
 run tar -xvf /opt/bash-4.3.tar.gz
 workdir /opt/bash-4.3
 run ls -al && ./configure && make && ln -sf /opt/bash-4.3/bash /bin/bash_shellshock
-copy myscript /usr/lib/cgi-bin/myscript.sh
+copy myscript /usr/lib/cgi-bin/scriptlet
 entrypoint service apache2 start && /bin/bash
 expose 80

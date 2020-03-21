@@ -5,4 +5,5 @@ if (rand() % 2 == 0){
 else{
 	header("BAS64:".base64_encode("Make a POST request to /api/final.php"));
 }
+echo "Howdy neighbor!";
 ?>
