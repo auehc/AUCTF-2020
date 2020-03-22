@@ -1,0 +1,2 @@
+user.txt:user:600
+flag.txt:root:600
