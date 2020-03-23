@@ -1,0 +1,17 @@
+<html>
+<body>
+<center><h1>FTP Server API Help Page</h1></center>
+<br>
+<br>
+<h2>Endpoints</h2>
+<p>/api/login - POST</p>
+<p>/api/ftp/dir - POST</p>
+<p>/api/ftp/get_file - POST</p>
+</br>
+</br>
+<h2>Params</h2>
+<p>/api/login - username, password</p>
+<p>/ftp/dir - dir</p>
+<p>/ftp/get_file - file</p>
+</body>
+</html>

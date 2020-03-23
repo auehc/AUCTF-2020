@@ -1,0 +1,6 @@
+#!/bin/bash_shellshock
+
+echo -e "Content-type: text/html\n\n"
+
+id
+netstat
