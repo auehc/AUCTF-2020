@@ -1,0 +1,3 @@
+The flag is the frequency used by Auburn University's bus system. This will test your OSINT skills
+
+Flag format: auctf{xxx.xxx}
