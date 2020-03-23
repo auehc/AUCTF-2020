@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+	web1:
+		build: ./web/web1
+		restart: always
+		networks:
+			- default
+		ports:
+			- "30020:80"
+	web2:
+		build: ./web/web2
+		restart: always
+		networks:
+			- default
+		ports:
+			- "30021:80"
+	web3:
+		build: ./web/web3
+		restart: always
+		networks:
+			- default
+		ports:
+			- "30022:80"
+	web4:
+		build: ./web/web4
+		restart: always
+		networks:
+			- default
+		ports:
+			- "30023:80"
+	web5:
+		build: ./web/web5
+		restart: always
+		networks:
+			- default
+		ports:
+			- "30024:80"
