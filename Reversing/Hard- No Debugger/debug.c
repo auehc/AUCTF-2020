@@ -43,6 +43,7 @@ void debugger_check()
     asm("dec ecx;");
     asm("jnz antiBpLoop;");
 }
+
 void DebuggerDetected()
 {
     printf("BAD\n");

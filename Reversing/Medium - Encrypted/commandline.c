@@ -2,34 +2,33 @@
 
 // TODO: needs to be encrypted
 char *network_info = "URL: ctf.auburn.edu, PORT: 68688";
-char *creds = "bucky:let_m3_1n";
+char *creds = "bucky:longing, rusted, seventeen, daybreak, furnace, nine, benign, homecoming, one, freight car";
 
 int main(int argc, char const *argv[])
 {
     lp_input = input;
 
     char login[BUFSIZ];
-
+    char username[BUFSIZ];
     setvbuf(stdout, NULL, _IONBF, 0);
 
-    printf("hello user\n");
     printf("Please Login: \n");
     printf("username: ");
     fgets(lp_input, BUFSIZ, stdin);
     remove_newline(lp_input);
     strcpy(login, lp_input);
-
+    strcpy(username, lp_input);
     printf("password: ");
     fgets(lp_input, BUFSIZ, stdin);
     remove_newline(lp_input);
     sprintf(login, "%s:%s", login, lp_input);
-    printf("%s\n", login);
 
     if (strcmp(login, creds))
     {
         printf("Error: Incorrect login credentials\n");
         exit(1);
     }
+    printf("Welcome %s\n\n", username);
     commandline();
 }
 /*
@@ -104,7 +103,7 @@ int cmd_dispatch(char *cmd)
  */
 int cmd_quit(int nargs, char **args)
 {
-    printf("Quiting AUBatch... \n");
+    printf("Quiting Terminal... \n");
 
     exit(0);
 }
@@ -116,7 +115,7 @@ int cmd_helpmenu(int n, char **a)
 {
 
     printf("\n");
-    printf("AUbatch help menu\n");
+    printf("Terminal help menu\n");
 
     int i = 0;
     while (1)
@@ -132,6 +131,22 @@ int cmd_helpmenu(int n, char **a)
     return 0;
 }
 
+int cmd_list(int nargs, char **args)
+{
+    char *call = malloc(BUFSIZ * sizeof(char));
+    for (int i = 0; i < nargs; i++)
+    {
+        printf("%s ", args[i]);
+        strcat(call, args[i]);
+        strcat(call, " ");
+    }
+    printf("\n");
+    printf("call: %s \n", call);
+
+    system(call);
+
+    free(call);
+}
 int cmd_read(int nargs, char **args)
 {
     if (nargs != 2)

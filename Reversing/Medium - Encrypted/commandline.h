@@ -13,12 +13,14 @@ int cmd_quit(int nargs, char **args);
 void showmenu();
 int cmd_helpmenu(int n, char **a);
 int cmd_dispatch(char *cmd);
+int cmd_list(int n, char **a);
 void *commandline();
 
 // char array of help definitions
 static const char *helpmenu[] = {
     "help: Print help menu",
     "read <filename>: read filename",
+    "ls: list current directory",
     "quit: Exit Terminal",
     NULL};
 
@@ -37,6 +39,7 @@ static const cmd cmdtable[] = {
     {"quit", cmd_quit},
     {"read", cmd_read},
     {"r", cmd_read},
+    {"ls", cmd_list},
     {NULL, NULL}};
 void remove_newline(char *buffer);
 

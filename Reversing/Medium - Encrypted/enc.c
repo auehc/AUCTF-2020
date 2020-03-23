@@ -1,8 +1,8 @@
 #include "enc.h"
 
-int secret[] = {27, 21, 22, 26, 59, 102, 115, 105, 90, 11, 22, 99};
+int secret[] = {14, 5, 6, 26, 57, 125, 96, 117, 123, 84, 24, 106};
 
-int seed[] = {116, 101, 115, 116};
+int seed[] = {97, 117, 99, 116, 102};
 
 int encrypt()
 {
@@ -15,7 +15,8 @@ int encrypt()
     int *encrypted = malloc(sizeof(int) * strlen(password));
     for (int i = 0; i < strlen(password); i++)
     {
-        int mod_i = i % 4;
+        int mod_i = i % 5;
+
         encrypted[i] = (int)password[i] ^ seed[mod_i];
         seed[mod_i] = encrypted[i];
     }
