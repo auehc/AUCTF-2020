@@ -1,7 +1,6 @@
 #include "commandline.h"
 
-// TODO: needs to be encrypted
-char *network_info = "URL: ctf.auburn.edu, PORT: 68688";
+char *network_info = "URL: ctf.auburn.edu, PORT: 30049";
 char *creds = "bucky:longing, rusted, seventeen, daybreak, furnace, nine, benign, homecoming, one, freight car";
 
 int main(int argc, char const *argv[])
