@@ -1,8 +1,8 @@
-version: '1'
+version: '3.3'
 
 services:
     crack:
-        build: "./reversing/Easy - Crackme"
+        build: "./Reversing/Easy - Crackme"
         networks:
             - default
         ports:
