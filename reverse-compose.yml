@@ -1,0 +1,27 @@
+version: '1'
+
+services:
+    crack:
+        build: "./reversing/Easy - Crackme"
+        networks:
+            - default
+        ports:
+            - "30000:30000"
+    interpret:
+        build: "./Reversing/Medium - Interpreter"
+        networks:
+            - default
+        ports:
+            - "30001:30001"
+    encrypted:
+        build: "./Reversing/Medium - Encrypted"
+        networks:
+            - default
+        ports:
+            - "30049:30049"
+    nested:
+        build: "./Reversing/Insane - Nested"
+        networks:
+            - default
+        ports:
+            - "30002:30002"
