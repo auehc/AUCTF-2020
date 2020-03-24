@@ -10,6 +10,8 @@ int main()
     const int y = func_2();
 
     const int z = func_3(x, y);
+
+    return z;
 }
 
 int func_1()
