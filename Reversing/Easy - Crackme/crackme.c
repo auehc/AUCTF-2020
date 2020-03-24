@@ -30,7 +30,7 @@ int main(int argc, char const *argv[])
     else
     {
         printf("That's not it!\n");
-        return 1;
+        return 0;
     }
     return 0;
 }

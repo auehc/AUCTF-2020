@@ -6,7 +6,7 @@ RUN groupadd ctf
 
 RUN mkdir /rev
 
-COPY secret/server /rev/
+COPY secret/server/server /rev/
 COPY flag.txt /rev/
 COPY entry.sh /rev/entry.sh
 

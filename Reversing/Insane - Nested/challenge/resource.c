@@ -10,6 +10,7 @@ int main()
 {
     printf("Welcome to The Vault!\n\n\tThis challenge is simple answer the questions right and you get the flag!\n");
 
+    printf("Be warned however, what you seek may not be here ... \n");
     if (check() == 1)
     {
         printf("\tNice job!\n");
@@ -33,10 +34,11 @@ int check()
 
     int size = (int)strlen(buffer);
 
-    char *manip =  calloc(size+1, sizeof(char));
-    if (manip == NULL) {
-         printf("Error: out of memory\n");
-         exit(1);
+    char *manip = calloc(size + 1, sizeof(char));
+    if (manip == NULL)
+    {
+        printf("Error: out of memory\n");
+        exit(1);
     }
 
     int j = 0;
@@ -53,55 +55,48 @@ int check()
 
     for (int i = 0, k = 0; i < size; i += 2 + k)
     {
-         if (i == 0)
-         {
-              manip[i] = buffer[j];
-              j++;
-              i++;
-              continue;
-         }
-         manip[i] = buffer[j];
-         j++;
-         k++;
+        if (i == 0)
+        {
+            manip[i] = buffer[j];
+            j++;
+            i++;
+            continue;
+        }
+        manip[i] = buffer[j];
+        j++;
+        k++;
     }
 
-    for (int i = 1, k = 0; i < size; i += 3 + k) {
-         if (i >= 7) {
-              k++;
-         }
+    for (int i = 1, k = 0; i < size; i += 3 + k)
+    {
+        if (i >= 7)
+        {
+            k++;
+        }
 
-         manip[i] = buffer[j];
-         j++;
+        manip[i] = buffer[j];
+        j++;
     }
 
+    for (int i = strlen(buffer) - 3, count = 3, k = 0; j < strlen(buffer); i--, count--)
+    {
+        if (count == 0)
+        {
+            i -= 3;
+            k++;
+            count = (3 - k);
+        }
 
-    for (int i = strlen(buffer) - 3, count = 3, k = 0; j < strlen(buffer); i--, count--) {
-         if (count == 0) {
-              i -= 3;
-              k++;
-              count = (3-k);
-         }
+        manip[i] = buffer[j];
+        j++;
+    }
 
-         manip[i] = buffer[j];
-         j++;
-     }
-
-     
     return strcmp(manip, "welcome_to_the_jungle!") == 0;
 }
 
 void print_flag()
 {
-    char flag[BUFSIZ];
-    FILE *f;
-    fopen_s(&f, "flag.txt", "r");
-    if (f == NULL)
-    {
-        printf("Too bad you can only run this exploit on the server...\n");
-        exit(0);
-    }
-    fgets(flag, BUFSIZ, f);
-    printf("\n\tflag: %s", flag);
+    printf("Sorry Mario... you're flag is somewhere else\n");
 }
 
 void remove_newline(char *buffer)

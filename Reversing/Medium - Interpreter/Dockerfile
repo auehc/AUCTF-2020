@@ -5,22 +5,20 @@ RUN apt install -y socat
 RUN apt install -y default-jre
 RUN groupadd ctf
 
-RUN mkdir /rev
 
-COPY interpret.class /rev/
-COPY flag.txt /rev/
-COPY entry.sh /rev/entry.sh
+COPY interpret.class /
+COPY flag.txt /
+COPY entry.sh /
 
-RUN useradd -G ctf --home=/rev revuser
-RUN useradd -G ctf --home=/rev revflag
+RUN useradd -G ctf --home=/ revuser
+RUN useradd -G ctf --home=/ revflag
 
-RUN chown revflag:revflag /rev/interpret.class
-RUN chown revflag:revflag /rev
-RUN chown revflag:revflag /rev/flag.txt
+RUN chown revflag:revflag /interpret.class
+RUN chown revflag:revflag /flag.txt
 
-RUN chmod 4755 /rev/interpret.class
-RUN chmod 4755 /rev/entry.sh
-RUN chmod 444 /rev/flag.txt
+RUN chmod 4755 /interpret.class
+RUN chmod 4755 /entry.sh
+RUN chmod 444 /flag.txt
 
 EXPOSE 30001
-ENTRYPOINT ["/rev/entry.sh"]
+ENTRYPOINT ["/entry.sh"]
