@@ -1,0 +1,24 @@
+FROM ubuntu:latest
+
+RUN apt update
+RUN apt install -y socat
+RUN apt install -y default-jre
+RUN groupadd ctf
+
+
+COPY interpret.class /
+COPY flag.txt /
+COPY entry.sh /
+
+RUN useradd -G ctf --home=/ revuser
+RUN useradd -G ctf --home=/ revflag
+
+RUN chown revflag:revflag /interpret.class
+RUN chown revflag:revflag /flag.txt
+
+RUN chmod 4755 /interpret.class
+RUN chmod 4755 /entry.sh
+RUN chmod 444 /flag.txt
+
+EXPOSE 30001
+ENTRYPOINT ["/entry.sh"]
