@@ -7,7 +7,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 #define MAX 8192
-#define PORT 27015
+#define PORT 30002
 #define SA struct sockaddr
 
 void func(int sockfd);
