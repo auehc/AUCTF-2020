@@ -52,6 +52,8 @@ void DebuggerDetected()
 
 int main(void)
 {
+    setvbuf(stdout, NULL, _IONBF, 0);
+
     printf("welcome\n");
     // char *msg = "IKILLWITHMYHEART";
     // char *mlsg = "SASRRWSXBIEBCMPX";
