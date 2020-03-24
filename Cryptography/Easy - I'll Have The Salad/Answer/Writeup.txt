@@ -1,0 +1,7 @@
+This is a Caesar cipher with a shift value of 21.
+
+To solve this problem visit this website:
+https://planetcalc.com/1434/
+
+Or for each letter, shift it's value by a given amount,
+this excludes special characters and numbers

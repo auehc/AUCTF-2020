@@ -1,0 +1,3 @@
+It's just base64 encoded. Not really cryptography
+
+auctf{4LL_y0Ur_B453_R_b3l0Ng_2_uS_124df2sdasv}

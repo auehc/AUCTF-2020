@@ -12,8 +12,8 @@
 
 ### Crypto: Charlie
 
-* [ ]  Easy
-* [ ]  Easy
+* [X]  Easy
+* [X]  Easy
 * [ ]  Medium
 * [ ]  Medium
 * [ ]  Hard
@@ -28,13 +28,14 @@
 
 ### BASH: DeMarcus
 
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
+* [x]  Easy
+* [x]  Easy
+* [x]  Medium
+* [x]  Medium
+* [x]  Hard
 
 ### Reversing: Jordan / Kensocolo
+
 
 * [x]  Crackme
 * [x]  Encoded Binary
@@ -44,6 +45,8 @@
 * [x]  Assembly
 * [ ]  Execution Flow
 * [x]  Debug
+
+
 
 ### Pwn: Jordan / Kensoscolo
 
@@ -62,7 +65,7 @@
 * [ ]  Hard
 
 
-### Pentesting: DeMarcus / Kensocolo
+### Pentesting: DeMarcus / Drew / Kensocolo
 
 * [ ]  Easy
 * [ ]  Easy
@@ -88,11 +91,11 @@
 
 ### Physical: Charlie
 
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
+* [x]  Easy
+* [x]  Easy
+* [x]  Medium
+* [x]  Medium
+* [x]  Hard
 
 ### Signal: Drew
 

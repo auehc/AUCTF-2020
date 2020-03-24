@@ -1,0 +1,5 @@
+Alice and Bob were messing around with their radios one afternoon. They were looking for local FM radio relays but swept past the FM band into some weird band. On that band, they heard an irregular signal. No-one was supposed to be transmitting on that frequency! They recognized that the signal got stronger when they moved closer to the direction of the farmers. What could they possibly need to transmit over the air? The attached file has a sample of the intercepted signal after cleaning it up:
+
+Note: This flag does not follow the normal format
+
+author: c

@@ -1,0 +1,5 @@
+Alice and Bob are obsessed with all kinds of languages and love talking to one another in fun and interesting ways. You name it, they've tried using it: smoke signals, sign language, Morse code, etc.! Sometimes their messages get a little garbled when transmitted, though. They found out about a really handy encoding scheme that a lot of systems use to help prevent this. It might not work for smoke signals, but WOW does it work for digital communications. Below is one of their messages. Can you figure out what it says?
+
+YXVjdGZ7NExMX3kwVXJfQjQ1M19SX2IzbDBOZ18yX3VTXzEyNGRmMnNkYXN2fQ==
+
+author: c

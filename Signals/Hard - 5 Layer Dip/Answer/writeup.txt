@@ -1,0 +1,8 @@
+The .wav file is a transmission of hexideciaml numbers, encoded using 8PSK1000.
+FLDIGI is one program that can decode the .wav file and save the output to a .txt file
+This can imported into wireshark as a hexdump to create a .pcap
+The pcap shows a "ImportantFile.docx" being transferred over ftp.
+The file can be extracted by finding the TCP stream that transfers data. Packet 38 is the first.
+Right click, select follow TCP stream. In the new window, set "Show and save data as" to "Raw"
+Click "Save as" and add the .docx extension.
+The file contains the flag: auctf{TCPIP_does_not_define_the_physical_layer}

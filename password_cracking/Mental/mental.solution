@@ -1,0 +1,12 @@
+cewl -d 0 -w color.list https://www.colorhexa.com/color-names
+cewl -d 0 -w country.list https://www.worldometers.info/geography/alphabetical-list-of-countries/
+cewl -d 0 -w fruit.list https://simple.wikipedia.org/wiki/List_of_fruits
+
+In Mentalist, use color.list as base word list.
+Append -
+Append country.list
+Append -
+Append fruit.list
+Generate final list, mine was called mental.dict
+
+hashcat -m 0 -a 0 mental.hash mental.dict

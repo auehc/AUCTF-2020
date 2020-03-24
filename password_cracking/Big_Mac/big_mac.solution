@@ -1,0 +1,1 @@
+hashcat -a 0 -m 160 big_mac.hash rockyou.txt
