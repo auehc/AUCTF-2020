@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
     if (strcmp(login, creds))
     {
         printf("Error: Incorrect login credentials\n");
-        exit(1);
+        return 0;
     }
     printf("Welcome %s\n\n", username);
     commandline();
