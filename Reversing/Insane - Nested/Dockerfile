@@ -1,25 +1,12 @@
-FROM ubuntu:latest
+from php:7.0-apache
 
-RUN apt update
-RUN apt install -y socat
-RUN groupadd ctf
+copy secret/server/question.php /var/www/html
 
-RUN mkdir /rev
+run service apache2 start && echo "<Directory /var/www/html>" >> /etc/apache2/sites-available/000-default.conf && \
+  echo "Options Indexes FollowSymLinks" >> /etc/apache2/sites-available/000-default.conf && \
+  echo "AllowOverride All" >> /etc/apache2/sites-available/000-default.conf && \
+  echo "Require all granted" >> /etc/apache2/sites-available/000-default.conf && \
+  echo "</Directory>" >> /etc/apache2/sites-available/000-default.conf && \
+  a2enmod rewrite && service apache2 restart && chmod 755 /var/www/html && chmod 755 /var/www/html/*
 
-COPY secret/server/server /rev/
-COPY flag.txt /rev/
-COPY entry.sh /rev/entry.sh
-
-RUN useradd -G ctf --home=/rev revuser
-RUN useradd -G ctf --home=/rev revflag
-
-RUN chown revflag:revflag /rev/server
-RUN chown revflag:revflag /rev
-RUN chown revflag:revflag /rev/flag.txt
-
-RUN chmod 4755 /rev/server
-RUN chmod 4755 /rev/entry.sh
-RUN chmod 444 /rev/flag.txt
-
-EXPOSE 30002
-ENTRYPOINT ["/rev/entry.sh"]
+expose 80

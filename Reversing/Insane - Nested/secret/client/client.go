@@ -1,39 +1,50 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"net"
+	"io/ioutil"
+	"net/http"
 	"os"
 )
+
+const login = "ctf.auburn.edu:30002"
 
 const sendBuf = "hello can you hear me?"
 const requestFlag = "can i have the flag?"
 
 func main() {
-	// connect to server
 
 	if len(os.Args) != 2 {
 		fmt.Println("usage: " + os.Args[0] + " IP:PORT")
 		return
 	}
-
 	initial := "Establishing Connection ... \n"
 	fmt.Println(initial)
 
-	conn, err := net.Dial("tcp", os.Args[1])
+	url := "http://" + os.Args[1] + "/question.php"
+	client := &http.Client{}
+	req, err := http.NewRequest("GET", url, nil)
 	if err == nil {
-		// send to server
-		fmt.Fprintf(conn, sendBuf)
-		// wait for reply
-		message, _ := bufio.NewReader(conn).ReadString('\n')
-		fmt.Print("Message from server: " + message)
+		req.Header.Set("HELLO", sendBuf)
+		req.Header.Set("HAND", requestFlag)
+		res, err := client.Do(req)
 
-		// send to server
-		fmt.Fprintf(conn, requestFlag)
-		// wait for reply
-		_, _ = bufio.NewReader(conn).ReadString('\n')
-		fmt.Print("Message from server: " + "")
+		if err == nil {
+			body, _ := ioutil.ReadAll(res.Body)
+			fmt.Print("Message from server: " + string(body))
+
+			cookie := res.Header.Get("COOKIE")
+
+			req, _ = http.NewRequest("GET", url, nil)
+			req.Header.Set("COOKIE", cookie)
+			_, _ = client.Do(req)
+
+			fmt.Print("Message from server: " + "")
+
+			// wait for reply
+		} else {
+			fmt.Print("Could not connect to server please contact admin")
+		}
 	} else {
 		fmt.Print("Could not connect to server please contact admin")
 	}
