@@ -1,8 +1,8 @@
-file = open("enc", "rb")
+file = open("enc.out", "rb")
 
 info = file.read()
 
-out_file = open("s", "+wb")
+out_file = open("enc", "+wb")
 for x in info:
     enc = (x ^ 78)
     if x is 0:
