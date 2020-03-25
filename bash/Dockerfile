@@ -1,6 +1,6 @@
 from ubuntu:latest
 
-run apt-get update && apt-get install -y openssh-server sudo && mkdir /var/run/sshd && \
+run apt-get update && apt-get install -y openssh-server sudo vim && mkdir /var/run/sshd && \
   echo "root:campbellsnowvanrellharper" | chpasswd && useradd -m level1 && \
   useradd -m level2 && useradd -m level3 && useradd -m level4 && useradd -m level5 && \
   echo "level1:aubie" | chpasswd && echo "level2:auctf{W3lcoM3_2_da_C7F}" | chpasswd && \
