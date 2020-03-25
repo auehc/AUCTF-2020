@@ -14,16 +14,18 @@ add level4 /home/level4
 add level5 /home/level5
 
 run chown level3:level2 /home/level2/random_dirs.sh && chmod 550 /home/level2/random_dirs.sh && \
-  chown level3:level3 /home/level2/flag.txt && chmod 550 /home/level2/level2_runner && chmod 440 /home/level2/flag.txt && \
+  chown level3:level3 /home/level2/flag.txt && chmod 2550 /home/level2/level2_runner && chmod 440 /home/level2/flag.txt && \
   chown level4:level3 /home/level3/passcodes.sh && chown level4:level4 /home/level4/flag.txt && \
-  chmod 440 /home/level3/flag.txt && chmod 550 /home/level3/passcodes.sh && chmod 550 \ 
+  chmod 440 /home/level3/flag.txt && chmod 550 /home/level3/passcodes.sh && chmod 2550 \ 
   /home/level3/level3_runner && chown level5:level4 /home/level4/print_file.sh && \ 
   chown level5:level5 /home/level4/flag.txt && chmod 440 /home/level4/flag.txt && \
-  chmod 550 /home/level4/print_file.sh && chmod 550 /home/level4/level4_runner && \
+  chmod 550 /home/level4/print_file.sh && chmod 2550 /home/level4/level4_runner && \
   chown root:root /home/level5/flag.txt && chown root:level5 /home/level5/portforce.sh && \
   chmod 440 /home/level5/flag.txt && chmod 550 /home/level5/portforce.sh && \
-  chmod 550 /home/level5/level5_runner && \
-  chmod -w /home/* && chmod o-r /home/* && rm /home/*/*.c
+  chmod 2550 /home/level5/level5_runner && \ chmod -w /home/* && chmod o-r /home/* && \
+  rm /home/*/*.c && chown level3:level2 /home/level2/level2_runner && chown level4:level3 \
+  /home/level3/level3_runner && chown level5:level4 /home/level4/level4_runner && \
+  chown root:level5 /home/level5/level5_runner
 
 expose 22
 cmd ["/usr/sbin/sshd", "-D"]
