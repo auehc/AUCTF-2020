@@ -14,14 +14,14 @@ add level4 /home/level4
 add level5 /home/level5
 
 run chown level3:level2 /home/level2/random_dirs.sh && chmod 550 /home/level2/random_dirs.sh && \
-  chown level3:level3 /home/level2/flag.txt && chmod g+s /home/level2/random_dirs.sh && chmod 400 /home/level2/flag.txt && \
+  chown level3:level3 /home/level2/flag.txt && chmod g+s /home/level2/random_dirs.sh && chmod 440 /home/level2/flag.txt && \
   chown level4:level3 /home/level3/passcodes.sh && chown level4:level4 /home/level4/flag.txt && \
-  chmod 400 /home/level3/flag.txt && chmod 550 /home/level3/passcodes.sh && chmod g+s \ 
+  chmod 440 /home/level3/flag.txt && chmod 550 /home/level3/passcodes.sh && chmod g+s \ 
   /home/level3/passcodes.sh && chown level5:level4 /home/level4/print_file.sh && \ 
-  chown level5:level5 /home/level4/flag.txt && chmod 400 /home/level4/flag.txt && \
+  chown level5:level5 /home/level4/flag.txt && chmod 440 /home/level4/flag.txt && \
   chmod 550 /home/level4/print_file.sh && chmod g+s /home/level4/print_file.sh && \
   chown root:root /home/level5/flag.txt && chown root:level5 /home/level5/portforce.sh && \
-  chmod 400 /home/level5/flag.txt && chmod 550 /home/level5/portforce.sh && \
+  chmod 440 /home/level5/flag.txt && chmod 550 /home/level5/portforce.sh && \
   chmod g+s /home/level5/portforce.sh && \
   chmod -w /home/* && chmod o-r /home/*
 
