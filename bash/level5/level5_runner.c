@@ -5,7 +5,7 @@
 
 int main()
 {
-    setgid( 0 );   // you can set it at run time also
+    setuid( 0 );   // you can set it at run time also
     system( "/home/level5/portforce.sh" );
     return 0;
  }

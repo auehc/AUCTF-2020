@@ -5,7 +5,7 @@
 
 int main()
 {
-    setgid( 1003 );   // you can set it at run time also
+    setuid( 1003 );   // you can set it at run time also
     system( "/home/level3/passcodes.sh" );
     return 0;
  }

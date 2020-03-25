@@ -5,7 +5,7 @@
 
 int main()
 {
-    setgid( 1004 );   // you can set it at run time also
+    setuid( 1004 );   // you can set it at run time also
     system( "/home/level4/print_file.sh" );
     return 0;
  }

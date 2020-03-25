@@ -5,7 +5,7 @@
 
 int main()
 {
-    setgid( 1002 );   // you can set it at run time also
+    seteuid( 1002 );   // you can set it at run time also
     system( "/home/level2/random_dirs.sh" );
     return 0;
  }
