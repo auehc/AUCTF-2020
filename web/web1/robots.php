@@ -1,7 +1,7 @@
 <?php
 $my_headers = apache_request_headers();
 $adage = strtoupper($_SERVER['HTTP_ANSWER']);
-if ($adage = "FEAR THE OLD BLOOD"){
+if ($adage == "FEAR THE OLD BLOOD"){
 	echo "Master Willem was right.";
 	echo "auctf{f3ar_z_olD3_8l0oD}";
 }

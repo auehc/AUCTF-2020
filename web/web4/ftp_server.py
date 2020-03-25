@@ -7,7 +7,11 @@ from pyftpdlib.servers import FTPServer
 def main():
     authorizer = DummyAuthorizer()
 
-    authorizer.add_user("username", "password", os.getcwd(), perm='elradfmwMT')
+    authorizer.add_user("username", "password", os.getcwd(), perm='elr')
+    authorizer.add_user("test","test", os.getcwd(), perm="elr")
+    authorizer.add_user("guest","password",os.getcwd(),perm="elr")
+    authorizer.add_user("ansible","ansible",os.getcwd(),perm="elr")
+    authorizer.add_user("auctf","aubie",os.getcwd(),perm="elr")
     authorizer.add_anonymous(os.getcwd())
 
     handler = FTPHandler

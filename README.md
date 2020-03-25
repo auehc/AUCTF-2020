@@ -4,11 +4,11 @@
 
 ### OSINT: Charlie
 
-* [X]  Easy
-* [X]  Easy
-* [X]  Medium
-* [X]  Medium
-* [X]  Hard
+* [x]  Easy
+* [x]  Easy
+* [x]  Medium
+* [x]  Medium
+* [x]  Hard
 
 ### Crypto: Charlie
 
@@ -34,13 +34,19 @@
 * [x]  Medium
 * [x]  Hard
 
-### Reversing: Jordan / Kensocolo 
+### Reversing: Jordan / Kensocolo
 
-* [x]  Easy
-* [x]  Easy
-* [x]  Medium
-* [x]  Medium
-* [ ]  Hard
+
+* [x]  Crackme
+* [x]  Encoded Binary
+* [x]  Interpreted
+* [x]  Resource
+* [x]  Keygen
+* [x]  Assembly
+* [ ]  Execution Flow
+* [x]  Debug
+
+
 
 ### Pwn: Jordan / Kensoscolo
 

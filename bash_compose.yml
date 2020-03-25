@@ -1,8 +1,10 @@
 version: '3'
 
 services:
-	bash:
-		build: ./bash
-		restart: always
-		networks: default
-		ports: "30040:22"
+        bash:
+                build: ./bash
+                restart: always
+                networks:
+                        -  default
+                ports: 
+                        - "30040:22"
