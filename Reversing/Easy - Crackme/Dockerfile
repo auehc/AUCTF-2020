@@ -6,7 +6,7 @@ RUN groupadd ctf
 
 RUN mkdir /rev
 
-COPY crackme /rev/
+COPY cracker_barrel /rev/crackme
 COPY flag.txt /rev/
 COPY entry.sh /rev/entry.sh
 

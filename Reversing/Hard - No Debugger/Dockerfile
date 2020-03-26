@@ -6,7 +6,7 @@ RUN groupadd ctf
 
 RUN mkdir /rev
 
-COPY debug /rev/
+COPY dont_break_me /rev/debug
 COPY flag.txt /rev/
 COPY entry.sh /rev/entry.sh
 

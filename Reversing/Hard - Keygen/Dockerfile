@@ -6,7 +6,7 @@ RUN groupadd ctf
 
 RUN mkdir /rev
 
-COPY keygen /rev/
+COPY sora /rev/keygen
 COPY flag.txt /rev/
 COPY entry.sh /rev/entry.sh
 

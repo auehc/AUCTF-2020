@@ -6,7 +6,7 @@ RUN apt install -y default-jre
 RUN groupadd ctf
 
 
-COPY interpret.class /
+COPY mr_game_and_watch.class /interpret.class
 COPY flag.txt /
 COPY entry.sh /
 
