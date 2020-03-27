@@ -1,31 +1,9 @@
 # PWN Challenge Descriptions
 
-## Control Flow Buffer Overflow
+## Easy - Python Shell
 
-## Jail
+## Medium - Local Variable Rewrite
 
-Python program that emulates a normal C program
+## Hard - Leap Frog Buffer Overflow
 
-## Buffer Overread
-
-## pwn4
-
-Function redirect with ASLR enabled, use format string vuln to leak addresses
-
-## "Custom" python shell
-
-Stores metadata about files, such as access. Won't open flag.txt, but you can change the database that stores access control list for the files
-
-## pwn6
-
-multi hop control flow exploit
-
-## pwn7
-
-rop chain
-
-## pwn8
-
-table of functions to jump to. takes in user input to pick but doesnt do bounds checking
-there's one function that loads the flag into memory, you have to cause the flag once loaded
-to be dumped out
+## Hard - Indirect Buffer Overflow
