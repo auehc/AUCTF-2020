@@ -5,6 +5,9 @@
 #include <sys/types.h>
 #include <assert.h>
 
+// #define DEBUG
+// gcc -o challenge challenge.c -fno-stack-protector -z execstack -m32
+
 /* Error Code */
 #define EINVAL 1
 #define E2BIG 2
@@ -99,6 +102,7 @@ void print_flag()
     }
     fgets(flag, BUFSIZ, f);
     printf("%s", flag);
+    exit(0);
 }
 
 void class()
@@ -165,18 +169,22 @@ int cmd_dispatch(char *cmdinput, const cmd *table)
     return EINVAL;
 }
 
-void vulnerable(char *arg)
+void test(char *arg)
 {
+
     int *p;
     int a;
-    // __asm__("push %ebp; lea -0x1ff3(%ebx),%eax; push %eax; call printf");
-    char buf[2048];
 
+#ifdef DEBUG
+    __asm__("push %ebp; lea -0x1e2b(%ebx),%eax; push %eax; call printf");
+#endif
+    char buf[2048];
     strncpy(buf, arg, sizeof(buf) + 8);
 
     *p = a;
-    // printf("\n0x%x\n", a);
-    // printf("jumping to 0x%x !\n", __builtin_return_address(0));
+#ifdef DEBUG
+    printf("0x%x\n", a);
+#endif
 }
 
 int main()
@@ -190,7 +198,7 @@ int main()
     remove_newline(buf);
 
     printf("Thanks! It is nice to meet you %s!\n\n", buf);
-    sleep(1);
+    // sleep(1);
     printf("Well enough of that let's start class ... ");
 
     class();
@@ -282,7 +290,9 @@ int class_hacker(int nargs, char **args)
 
     char buf[BUFSIZ];
     fgets(buf, BUFSIZ, stdin);
-    vulnerable(buf);
+
+    printf("Got %s\n", buf);
+    test(buf);
 }
 
 void remove_newline(char *buffer)
