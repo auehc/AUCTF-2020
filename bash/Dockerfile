@@ -21,7 +21,7 @@ add level5 /home/level5
 run chown level3:level2 /home/level2/random_dirs.sh && chmod 550 /home/level2/random_dirs.sh \
   && chown level3:level3 /home/level2/flag.txt && chmod 2550 /home/level2/level2_runner \
   && chmod 440 /home/level2/flag.txt && chown level4:level3 /home/level3/passcodes.sh \
-  && chown level4:level4 /home/level4/flag.txt && chmod 440 /home/level3/flag.txt \
+  && chown level4:level4 /home/level3/flag.txt && chmod 440 /home/level3/flag.txt \
   && chmod 550 /home/level3/passcodes.sh && chown level5:level4 /home/level4/print_file.sh \
   && chown level5:level5 /home/level4/flag.txt && chmod 440 /home/level4/flag.txt \
   && chmod 550 /home/level4/print_file.sh && chmod 2550 /home/level4/level4_runner \
