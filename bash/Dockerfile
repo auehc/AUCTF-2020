@@ -8,7 +8,6 @@ run apt-get update && apt-get install -y openssh-server sudo vim && mkdir /var/r
   | chpasswd && echo "level5:auctf{n3tc@_purt_\$can}" | chpasswd \
   && echo "level2 ALL=(level3) NOPASSWD:/home/level2/random_dirs.sh" >> /etc/sudoers \
   && echo "level3 ALL=(level4) NOPASSWD:/home/level3/passcodes.sh" >> /etc/sudoers \
-  && echo "level4 ALL=(level5) NOPASSWD:/home/level4/print_file.sh" >> /etc/sudoers \
   && echo "level5 ALL=(ALL) NOPASSWD:/home/level5/portforce.sh" >> /etc/sudoers
 
 
