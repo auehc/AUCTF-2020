@@ -3,31 +3,39 @@ from os import system
 
 
 acl_file_path = "acl.txt"
+
+
 class Shell(cmd.Cmd):
     intro = '<insert challenge description and intro here>'
     doc_header = 'Use help <command> for help on specific command.'
-    prompt = 'user@shell$ '
+    prompt = 'user@pyshell$ '
+
+    def can_read(self, perm):
+        return perm >= 4
+
+    def can_write(self, perm):
+        return perm == 2 or perm >= 5
 
     def do_ls(self, args):
         '''
         List files in current directory. Refer to ls man page for arguments
         '''
         system(f"ls {args}")
-    
+
     def do_man(self, args):
         '''
         View man page of command
         '''
         system(f"man {args}")
-    
-    def parse_acl(self, filename):
+
+    def parse_acl(self, filename, logic):
         with open(acl_file_path) as f:
             for line in f:
                 if filename in line:
                     perms = line.split(":")[2].strip()
-                    if int(perms[2]) >= 4:
+                    if logic(int(perms[2])):
                         return True
-                    elif line.split(":")[1] == "user" and int(perms[0]) >= 4:
+                    elif line.split(":")[1] == "user" and logic(int(perms[0])):
                         return True
                     else:
                         return False
@@ -36,17 +44,21 @@ class Shell(cmd.Cmd):
         '''
         View contents of file
         '''
-        can_view = self.parse_acl(args)
+        can_view = self.parse_acl(args, self.can_read)
         if can_view:
             system(f"cat {args}")
         else:
             print("Don't have da permzzz")
-    
+
     def do_nano(self, args):
         '''
         Open up file in nano
         '''
-        system(f"nano -R {args}")
+        can_edit = self.parse_acl(args, self.can_write)
+        if can_edit:
+            system(f"nano -R {args}")
+        else:
+            print("Dont have da permzzz")
 
 
 if __name__ == '__main__':
