@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <strings.h>
 #include <stdbool.h>
+#include <string.h>
 
 #define FLAG_SIZE 64
 
@@ -14,7 +15,7 @@ bool isInRoom = false;
 bool key1 = false;
 bool key2 = false;
 char *key3 = "AAAAAAAAAAAAAAAA";
-unsigned long key4 = 0x0;
+long long key4 = 0x0;
 
 void starting_point();
 void menu();
@@ -28,6 +29,7 @@ void get_flag();
 
 int main(void)
 {
+    setvbuf(stdout, NULL, _IONBF, 0);
     starting_point();
     game();
 }
@@ -38,6 +40,7 @@ void game()
     {
         menu();
         char option = get_input("Your choice: ");
+        printf("\n\n");
         if (option == '1')
         {
             printf("You can go into:\n Room 1\n Room 2\n Room 3\n Room 4\n\n");
@@ -100,6 +103,7 @@ void game()
                         char buf[256];
                         printf("Enter something: ");
                         gets(buf);
+                        break;
                     }
                     else
                     {
@@ -121,7 +125,7 @@ void game()
             }
             else
             {
-                printf("You aren't in a room!!");
+                printf("You aren't in a room!!\n");
             }
         }
         else if (option == '4')
@@ -132,6 +136,7 @@ void game()
         {
             printf("You didn't enter a proper option. Try Again!\n");
         }
+        printf("\n");
     }
 }
 
@@ -156,7 +161,7 @@ void menu()
 
 char get_input(char prompt[])
 {
-    char choice[2];
+    char choice[BUFSIZ];
     printf("%s", prompt);
     scanf("%s", choice);
     fflush(stdin);
