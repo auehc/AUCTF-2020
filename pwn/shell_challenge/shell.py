@@ -40,25 +40,24 @@ class Shell(cmd.Cmd):
                     else:
                         return False
 
+    def do_echo(self, args):
+        filename = args.split(" ")[-1]
+        can_edit = self.parse_acl(filename, self.can_write)
+        if can_edit:
+            system(f"echo {args}")
+        else:
+            print("Don't have da permzzz")
+
     def do_cat(self, args):
         '''
         View contents of file
         '''
-        can_view = self.parse_acl(args, self.can_read)
+        filename = args.split(" ")[-1]
+        can_view = self.parse_acl(filename, self.can_read)
         if can_view:
             system(f"cat {args}")
         else:
             print("Don't have da permzzz")
-
-    def do_nano(self, args):
-        '''
-        Open up file in nano
-        '''
-        can_edit = self.parse_acl(args, self.can_write)
-        if can_edit:
-            system(f"nano -R {args}")
-        else:
-            print("Dont have da permzzz")
 
 
 if __name__ == '__main__':
