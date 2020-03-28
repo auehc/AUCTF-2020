@@ -5,7 +5,7 @@
 #include <sys/types.h>
 #include <assert.h>
 
-// #define DEBUG
+#define DEBUG
 // gcc -o challenge challenge.c -fno-stack-protector -z execstack -m32
 
 /* Error Code */
@@ -189,7 +189,8 @@ void test(char *arg)
 
 int main()
 {
-    printf("Welcome to your new online class!");
+    setvbuf(stdout, NULL, _IONBF, 0);
+    printf("Welcome to your new online class!\n");
     printf("We here, at Eon Pillars, we think Zoom is trash and prefer to have our lessions via command line!\n");
 
     printf("May I get your name?\n\tName: ");
