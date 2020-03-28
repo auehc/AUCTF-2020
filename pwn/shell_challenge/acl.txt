@@ -1,5 +1,5 @@
 user.txt:user:600
 flag.txt:root:600
 .flag.txt:user:600
-acl.txt:root:602
+acl.txt:root:606
 secret/super/duper/special/secret/in/here/foundme:user:600
