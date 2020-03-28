@@ -8,6 +8,8 @@ void print_flag();
 
 int main()
 {
+    setvbuf(stdout, NULL, _IONBF, 0);
+
     printf("Hi!\nWelcome to my program... it's a little buggy...\n");
     vulnerable();
 }
