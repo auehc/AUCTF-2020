@@ -6,7 +6,7 @@ RUN groupadd ctf
 
 RUN mkdir /pwn
 
-COPY challenge /pwn/challenge
+COPY online /pwn/challenge
 COPY flag.txt /pwn/
 COPY entry.sh /pwn/
 

@@ -6,7 +6,7 @@ RUN groupadd ctf
 
 RUN mkdir /pwn
 
-COPY overwrite /pwn/overwrite
+COPY turkey /pwn/overwrite
 COPY flag.txt /pwn/
 COPY entry.sh /pwn/
 
