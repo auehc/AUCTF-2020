@@ -6,6 +6,7 @@
 
 #define FLAG_SIZE 64
 
+
 bool isInRoom1 = false;
 bool isInRoom2 = false;
 bool isInRoom3 = false;
@@ -26,6 +27,7 @@ void get_key1(unsigned int arg_check);
 void get_key2();
 void set_key4();
 void get_flag();
+void room4();
 void remove_newline(char *buffer);
 
 int main(void)
@@ -95,34 +97,7 @@ void game()
             }
             else if (isInRoom4)
             {
-                printf("Wow this room is special. It echoes back what you say!\n");
-                while (true)
-                {
-                    if (unlockHiddenRoom4)
-                    {
-                        printf("Welcome to the hidden room! Good Luck\n");
-                        char buf[256];
-                        printf("Enter something: ");
-                        gets(buf);
-                        break;
-                    }
-                    else
-                    {
-                        char buffer[256];
-                        printf("Press Q to exit: ");
-                        fgets(buffer, 256, stdin);
-                        remove_newline(buffer);
-                        if (strcmp(buffer, "Q") == 0)
-                        {
-                            break;
-                        }
-
-                        if (strcmp(buffer, "Stephen") == 0)
-                        {
-                            unlockHiddenRoom4 = true;
-                        }
-                    }
-                }
+                room4();
             }
             else
             {
@@ -160,12 +135,43 @@ void menu()
     printf("4. Quit\n");
 }
 
+void room4()
+{
+    printf("Wow this room is special. It echoes back what you say!\n");
+    while (true)
+    {
+        if (unlockHiddenRoom4)
+        {
+            printf("Welcome to the hidden room! Good Luck\n");
+            char buf[16];
+            printf("Enter something: ");
+            gets(buf);
+            break;
+        }
+        else
+        {
+            char buffer[16];
+            printf("Press Q to exit: ");
+            fgets(buffer, 16, stdin);
+            remove_newline(buffer);
+            printf("\tYou entered '%s'\n", buffer);
+            if (strcmp(buffer, "Q") == 0)
+            {
+                break;
+            }
+
+            if (strcmp(buffer, "Stephen") == 0)
+            {
+                unlockHiddenRoom4 = true;
+            }
+        }
+    }
+}
 char get_input(char prompt[])
 {
-    char choice[BUFSIZ];
+    char choice[2];
     printf("%s", prompt);
-    scanf("%s", choice);
-    fflush(stdin);
+    fgets(choice, 2, stdin);
     return choice[0];
 }
 
@@ -191,7 +197,7 @@ void get_key1(unsigned int arg_check)
 
 void get_key2()
 {
-    if (!key1 && strcmp(key3, "Dormammu"))
+    if (!key1 && strcmp(key3, "Dormammu") == 0)
     {
         key2 = true;
     }
@@ -203,14 +209,15 @@ void get_key2()
 
 void AAsDrwEk()
 {
-    key3 = "Dormmamu";
+    key3 = "Dormammu";
 }
 
 void set_key4()
 {
-    if (!isInRoom && key1 && key2 && strcmp(key3, "Dormmamu"))
+    if (!isInRoom && key1 && key2 && strcmp(key3, "Dormammu") == 0)
     {
         key4 = 0x537472616e6765;
+        __asm__("push %eax; mov 0x8(%ebp), %eax; mov %eax, 0x4(%ebp); pop %eax;");
     }
     else
     {
