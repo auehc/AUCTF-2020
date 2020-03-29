@@ -6,7 +6,6 @@
 
 #define FLAG_SIZE 64
 
-
 bool isInRoom1 = false;
 bool isInRoom2 = false;
 bool isInRoom3 = false;
@@ -172,6 +171,7 @@ char get_input(char prompt[])
     char choice[2];
     printf("%s", prompt);
     fgets(choice, 2, stdin);
+    remove_newline(choice);
     return choice[0];
 }
 
