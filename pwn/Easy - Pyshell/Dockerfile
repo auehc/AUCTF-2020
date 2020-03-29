@@ -7,11 +7,6 @@ RUN groupadd ctf
 RUN mkdir /pwn
 
 COPY shell.py /pwn/
-COPY flag.txt /pwn/
-COPY .flag.txt /pwn/
-COPY acl.txt /pwn/
-COPY user.txt /pwn/
-COPY secret/super/duper/special/secret/in/here/foundme /pwn/secret/super/duper/special/secret/in/here/foundme
 COPY entry.sh /pwn/
 
 RUN useradd -G ctf --home=/pwn pwnuser

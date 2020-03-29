@@ -2,13 +2,13 @@ version: '3.3'
 # Ensure ASLR Is off!! echo 0 > /proc/sys/kernel/randomize_va_space
 services:
     shell:
-        build: "./Pwn/Easy - Overwrite"
+        build: "./Pwn/Easy - Pyshell"
         networks:
             - default
         ports:
             - "30010:30010"
     overwrite:
-        build: "./Pwn/Easy - Pyshell"
+        build: "./Pwn/Easy - Overwrite"
         networks:
             - default
         ports:
