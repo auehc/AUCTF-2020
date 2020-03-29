@@ -26,6 +26,7 @@ void get_key1(unsigned int arg_check);
 void get_key2();
 void set_key4();
 void get_flag();
+void remove_newline(char *buffer);
 
 int main(void)
 {
@@ -109,8 +110,8 @@ void game()
                     {
                         char buffer[256];
                         printf("Press Q to exit: ");
-                        scanf("%s", buffer);
-                        fflush(stdin);
+                        fgets(buffer, 256, stdin);
+                        remove_newline(buffer);
                         if (strcmp(buffer, "Q") == 0)
                         {
                             break;
@@ -244,5 +245,13 @@ void get_flag()
     else
     {
         printf("It's not going to be that easy. Come on");
+    }
+}
+void remove_newline(char *buffer)
+{
+    int string_length = strlen(buffer);
+    if (buffer[string_length - 1] == '\n')
+    {
+        buffer[string_length - 1] = '\0';
     }
 }
