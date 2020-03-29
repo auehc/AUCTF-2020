@@ -1,0 +1,27 @@
+version: '3.3'
+# Ensure ASLR Is off!! echo 0 > /proc/sys/kernel/randomize_va_space
+services:
+    shell:
+        build: "./Pwn/Easy - Pyshell"
+        networks:
+            - default
+        ports:
+            - "30010:30010"
+    overwrite:
+        build: "./Pwn/Easy - Overwrite"
+        networks:
+            - default
+        ports:
+            - "30011:30011"
+    indirection:
+        build: "./Pwn/Medium - Leap Frog"
+        networks:
+            - default
+        ports:
+            - "30012:30012"
+    house:
+        build: "./Pwn/Hard - Indirection"
+        networks:
+            - default
+        ports:
+            - "30013:30013"
