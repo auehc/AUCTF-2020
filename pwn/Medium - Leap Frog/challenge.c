@@ -217,7 +217,7 @@ void set_key4()
     if (!isInRoom && key1 && key2 && strcmp(key3, "Dormammu") == 0)
     {
         key4 = 0x537472616e6765;
-        __asm__("push %eax; mov 0x8(%ebp), %eax; mov %eax, 0x4(%ebp); pop %eax;");
+        // __asm__("push %eax; mov 0x8(%ebp), %eax; mov %eax, 0x4(%ebp); pop %eax;");
     }
     else
     {
