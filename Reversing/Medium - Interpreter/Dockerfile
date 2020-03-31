@@ -1,8 +1,6 @@
 FROM ubuntu:latest
 
-RUN apt update
-RUN apt install -y socat
-RUN apt install -y default-jre
+RUN apt update && apt install -y socat default-jre
 RUN groupadd ctf
 
 
