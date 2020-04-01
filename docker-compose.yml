@@ -8,12 +8,24 @@ services:
             - default
         ports:
             - "30010:30010"
+        deploy:
+            resources:
+                limits:
+                    cpus: '1.0'
+                    memory: '32M'
+        restart: always
     overwrite:
         build: "./Pwn/Easy - Overwrite"
         networks:
             - default
         ports:
             - "30011:30011"
+        deploy:
+            resources:
+                limits:
+                    cpus: '1.0'
+                    memory: '32M'
+        restart: always
     indirection:
         build: "./Pwn/Medium - Leap Frog"
         networks:
@@ -25,6 +37,7 @@ services:
                 limits:
                     cpus: '1.0'
                     memory: '32M'
+        restart: always
         read_only: true
     house:
         build: "./Pwn/Hard - Indirection"
@@ -32,6 +45,12 @@ services:
             - default
         ports:
             - "30013:30013"
+        deploy:
+            resources:
+                limits:
+                    cpus: '1.0'
+                    memory: '32M'
+        restart: always
     bash:
             build: ./bash
             restart: always
@@ -39,42 +58,84 @@ services:
                     -  default
             ports:
                     - "30040:22"
+            deploy:
+                resources:
+                    limits:
+                        cpus: '1.0'
+                        memory: '32M'
+            restart: always
     crack:
         build: "./Reversing/Easy - Crackme"
         networks:
             - default
         ports:
             - "30000:30000"
+        deploy:
+            resources:
+                limits:
+                    cpus: '1.0'
+                    memory: '32M'
+        restart: always
     interpret:
         build: "./Reversing/Medium - Interpreter"
         networks:
             - default
         ports:
             - "30001:30001"
+        deploy:
+            resources:
+                limits:
+                    cpus: '1.0'
+                    memory: '32M'
+        restart: always
     keygen:
         build: "./Reversing/Hard - Keygen"
         networks:
             - default
         ports:
             - "30004:30004"
+        deploy:
+            resources:
+                limits:
+                    cpus: '1.0'
+                    memory: '32M'
+        restart: always
     nodbg:
         build: "./Reversing/Hard - No Debugger"
         networks:
             - default
         ports:
             - "30005:30005"
+        deploy:
+            resources:
+                limits:
+                    cpus: '1.0'
+                    memory: '32M'
+        restart: always
     nested:
         build: "./Reversing/Insane - Nested"
         networks:
             - default
         ports:
             - "30002:80"
+        deploy:
+            resources:
+                limits:
+                    cpus: '1.0'
+                    memory: '32M'
+        restart: always
     encrypted:
         build: "./Reversing/Medium - Encrypted"
         networks:
             - default
         ports:
             - "30049:30049"
+        deploy:
+            resources:
+                limits:
+                    cpus: '1.0'
+                    memory: '32M'
+        restart: always
     extraordinary:
         build: "./Cryptography/Easy - Extraordinary"
         restart: always
@@ -82,6 +143,12 @@ services:
                 -  default
         ports:
                 - "30030:30030"
+        deploy:
+            resources:
+                limits:
+                    cpus: '1.0'
+                    memory: '32M'
+        restart: always
     pick_your_poison:
         build: "./Cryptography/Medium - Pick Your Poison"
         restart: always
@@ -89,3 +156,9 @@ services:
                 -  default
         ports:
                 - "30031:30031"
+        deploy:
+            resources:
+                limits:
+                    cpus: '1.0'
+                    memory: '32M'
+        restart: always
