@@ -177,3 +177,73 @@ services:
                     memory: '32M'
         restart: always
         read_only: true
+    web1:
+            build: ./web/web1
+            restart: always
+            networks:
+                    - default
+            ports:
+                    - "30020:80"
+            deploy:
+                resources:
+                    limits:
+                        cpus: '1.0'
+                        memory: '32M'
+            restart: always
+            read_only: true
+    web2:
+            build: ./web/web2
+            restart: always
+            networks:
+                    - default
+            ports:
+                    - "30021:80"
+            deploy:
+                resources:
+                    limits:
+                        cpus: '1.0'
+                        memory: '32M'
+            restart: always
+            read_only: true
+    web3:
+            build: ./web/web3
+            restart: always
+            networks:
+                    - default
+            ports:
+                    - "30022:80"
+            deploy:
+                resources:
+                    limits:
+                        cpus: '1.0'
+                        memory: '32M'
+            restart: always
+            read_only: true
+    web4:
+            build: ./web/web4
+            restart: always
+            networks:
+                    - default
+            ports:
+                    - "30023:80"
+            deploy:
+                resources:
+                    limits:
+                        cpus: '1.0'
+                        memory: '32M'
+            restart: always
+            read_only: true
+    web5:
+            build: ./web/web5
+            restart: always
+            networks:
+                    - default
+            ports:
+                    - "30024:80"
+            deploy:
+                resources:
+                    limits:
+                        cpus: '1.0'
+                        memory: '32M'
+            restart: always
+            read_only: true
