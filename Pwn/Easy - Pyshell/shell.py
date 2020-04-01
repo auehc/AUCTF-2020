@@ -55,7 +55,7 @@ files = [
     File(".acl.txt", "auctf{h4_y0u_g0t_tr0ll3d_welC0m#_t0_pWN_l@nd}"),
     File(".flag.txt", "nope not here sorry :)"),
     File("user.txt", "this is some user content. I bet u wish the flag was here"),
-    File("flag.txt", "aUctf{h3y_th3_fl4g_¯\_(ツ)_/¯}")
+    File("flag.txt", "aUctf_{h3y_th3_fl4g_\:\(¯}")
 ]
 
 
