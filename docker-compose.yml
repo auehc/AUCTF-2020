@@ -14,6 +14,7 @@ services:
                     cpus: '1.0'
                     memory: '32M'
         restart: always
+        read_only: true
     overwrite:
         build: "./Pwn/Easy - Overwrite"
         networks:
@@ -26,6 +27,7 @@ services:
                     cpus: '1.0'
                     memory: '32M'
         restart: always
+        read_only: true
     indirection:
         build: "./Pwn/Medium - Leap Frog"
         networks:
@@ -51,6 +53,7 @@ services:
                     cpus: '1.0'
                     memory: '32M'
         restart: always
+        read_only: true
     bash:
             build: ./bash
             restart: always
@@ -64,6 +67,7 @@ services:
                         cpus: '1.0'
                         memory: '32M'
             restart: always
+            # read_only: true
     crack:
         build: "./Reversing/Easy - Crackme"
         networks:
@@ -76,6 +80,7 @@ services:
                     cpus: '1.0'
                     memory: '32M'
         restart: always
+        read_only: true
     interpret:
         build: "./Reversing/Medium - Interpreter"
         networks:
@@ -88,6 +93,7 @@ services:
                     cpus: '1.0'
                     memory: '32M'
         restart: always
+        read_only: true
     keygen:
         build: "./Reversing/Hard - Keygen"
         networks:
@@ -100,6 +106,7 @@ services:
                     cpus: '1.0'
                     memory: '32M'
         restart: always
+        read_only: true
     nodbg:
         build: "./Reversing/Hard - No Debugger"
         networks:
@@ -112,6 +119,7 @@ services:
                     cpus: '1.0'
                     memory: '32M'
         restart: always
+        read_only: true
     nested:
         build: "./Reversing/Insane - Nested"
         networks:
@@ -124,6 +132,7 @@ services:
                     cpus: '1.0'
                     memory: '32M'
         restart: always
+        read_only: true
     encrypted:
         build: "./Reversing/Medium - Encrypted"
         networks:
@@ -136,6 +145,7 @@ services:
                     cpus: '1.0'
                     memory: '32M'
         restart: always
+        read_only: true
     extraordinary:
         build: "./Cryptography/Easy - Extraordinary"
         restart: always
@@ -149,6 +159,7 @@ services:
                     cpus: '1.0'
                     memory: '32M'
         restart: always
+        read_only: true
     pick_your_poison:
         build: "./Cryptography/Medium - Pick Your Poison"
         restart: always
@@ -162,3 +173,4 @@ services:
                     cpus: '1.0'
                     memory: '32M'
         restart: always
+        read_only: true
