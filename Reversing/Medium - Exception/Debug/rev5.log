@@ -1,0 +1,16 @@
+cl : command line warning D9002: ignoring unknown option '/SAFESEH:NO'
+  commandline.c
+C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\Medium - Exception\commandline.c(39,26): warning C4013: 'strtok_s' undefined; assuming extern returning int
+C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\Medium - Exception\commandline.c(39,49): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\Medium - Exception\commandline.c(41,50): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\Medium - Exception\commandline.c(58,43): warning C4013: 'strcmp' undefined; assuming extern returning int
+C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\Medium - Exception\commandline.c(146,28): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\Medium - Exception\commandline.c(143,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\Medium - Exception\commandline.c(200,28): warning C4244: '/=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\Medium - Exception\commandline.c(195,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\Medium - Exception\commandline.c(209,32): warning C4013: 'strlen' undefined; assuming extern returning int
+  main.c
+  Generating Code...
+C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\Medium - Exception\main.c(65): warning C4733: Inline asm assigning to 'FS:0': handler not registered as safe handler
+C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\Medium - Exception\main.c(55): warning C4733: Inline asm assigning to 'FS:0': handler not registered as safe handler
+  rev5.vcxproj -> C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\Medium - Exception\Debug\rev5.exe

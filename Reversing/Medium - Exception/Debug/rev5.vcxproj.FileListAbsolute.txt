@@ -1,0 +1,4 @@
+C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\rev5\Debug\rev5.exe
+C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\rev5\Debug\rev5.pdb
+C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\Medium - Exception\Debug\rev5.exe
+C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\Medium - Exception\Debug\rev5.pdb
