@@ -59,7 +59,6 @@ services:
         read_only: true
     bash:
             build: ./Bash
-            restart: always
             networks:
                     -  default
             ports:
@@ -151,7 +150,6 @@ services:
         read_only: true
     extraordinary:
         build: "./Cryptography/Easy - Extraordinary"
-        restart: always
         networks:
                 -  default
         ports:
@@ -165,7 +163,6 @@ services:
         read_only: true
     pick_your_poison:
         build: "./Cryptography/Medium - Pick Your Poison"
-        restart: always
         networks:
                 -  default
         ports:
@@ -179,7 +176,6 @@ services:
         read_only: true
     web1:
             build: ./Web/web1
-            restart: always
             networks:
                     - default
             ports:
@@ -193,7 +189,6 @@ services:
             # read_only: true
     web2:
             build: ./Web/web2
-            restart: always
             networks:
                     - default
             ports:
@@ -207,7 +202,6 @@ services:
             # read_only: true
     web3:
             build: ./Web/web3
-            restart: always
             networks:
                     - default
             ports:
@@ -221,7 +215,6 @@ services:
             # read_only: true
     web4:
             build: ./Web/web4
-            restart: always
             networks:
                     - default
             ports:
@@ -235,7 +228,6 @@ services:
             # read_only: true
     web5:
             build: ./Web/web5
-            restart: always
             networks:
                     - default
             ports:
