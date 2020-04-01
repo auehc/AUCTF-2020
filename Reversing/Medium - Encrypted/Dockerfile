@@ -5,7 +5,7 @@ RUN groupadd ctf
 
 RUN mkdir /rev
 
-COPY purple_socks /rev/enc
+COPY enc.out /rev/enc
 COPY flag.txt /rev/
 COPY entry.sh /rev/entry.sh
 
