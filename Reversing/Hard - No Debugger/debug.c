@@ -54,9 +54,7 @@ int main(void)
 {
     setvbuf(stdout, NULL, _IONBF, 0);
 
-    printf("54 68 65 20 6d 61 6e 20 69 6e 20 62 6c 61 63 6b 20 66 6c 65 64 20 \
-    61 63 72 6f 73 73 20 74 68 65 20 64 65 73 65 72 74 2c 20 61 6e 64 20 74 68 \
-    65 20 67 75 6e 73 6c 69 6e 67 65 72 20 66 6f 6c 6c 6f 77 65 64 2e\n");
+    printf("54 68 65 20 6d 61 6e 20 69 6e 20 62 6c 61 63 6b 20 66 6c 65 64 20 61 63 72 6f 73 73 20 74 68 65 20 64 65 73 65 72 74 2c 20 61 6e 64 20 74 68 65 20 67 75 6e 73 6c 69 6e 67 65 72 20 66 6f 6c 6c 6f 77 65 64 2e\n");
     // char *msg = "IKILLWITHMYHEART";
     // char *mlsg = "SASRRWSXBIEBCMPX";
     debugger_check();
