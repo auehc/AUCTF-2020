@@ -2,8 +2,8 @@ version: '3.3'
 
 # Ensure ASLR Is off!! echo 0 > /proc/sys/kernel/randomize_va_space
 # Run docker-compose with --compatibility switch
-	# sudo docker-compose --compatibility up --build -d
-	# sudo docker-compose --compatibility down
+# sudo docker-compose --compatibility up --build -d
+# sudo docker-compose --compatibility down
 services:
     shell:
         build: "./Pwn/Easy - Pyshell"
