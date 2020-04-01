@@ -190,7 +190,7 @@ services:
                         cpus: '1.0'
                         memory: '32M'
             restart: always
-            read_only: true
+            # read_only: true
     web2:
             build: ./Web/web2
             restart: always
@@ -204,7 +204,7 @@ services:
                         cpus: '1.0'
                         memory: '32M'
             restart: always
-            read_only: true
+            # read_only: true
     web3:
             build: ./Web/web3
             restart: always
@@ -218,7 +218,7 @@ services:
                         cpus: '1.0'
                         memory: '32M'
             restart: always
-            read_only: true
+            # read_only: true
     web4:
             build: ./Web/web4
             restart: always
@@ -232,7 +232,7 @@ services:
                         cpus: '1.0'
                         memory: '32M'
             restart: always
-            read_only: true
+            # read_only: true
     web5:
             build: ./Web/web5
             restart: always
@@ -246,4 +246,4 @@ services:
                         cpus: '1.0'
                         memory: '32M'
             restart: always
-            read_only: true
+            # read_only: true
