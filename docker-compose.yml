@@ -135,7 +135,7 @@ services:
                     cpus: '1.0'
                     memory: '32M'
         restart: always
-        read_only: true
+        # read_only: true
     encrypted:
         build: "./Reversing/Medium - Encrypted"
         networks:
