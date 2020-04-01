@@ -140,7 +140,7 @@ services:
         networks:
             - default
         ports:
-            - "30011:80"
+            - "30009:80"
         deploy:
             resources:
                 limits:
