@@ -1,7 +1,0 @@
-  resource.c
-C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\Insane - Nested\challenge\resource.c(81,58): warning C4018: '<': signed/unsigned mismatch
-  Generating code
-  Previous IPDB not found, fall back to full compilation.
-  All 7 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Finished generating code
-  challenge.vcxproj -> C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\Insane - Nested\challenge\Release\challenge.exe

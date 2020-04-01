@@ -1,1 +1,0 @@
-C:\Users\Jordan\Documents\GitHub\AUCTF-2020\Reversing\Insane - Nested\challenge\Release\challenge.exe
