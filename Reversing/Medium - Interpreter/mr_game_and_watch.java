@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.security.MessageDigest;
 
-public class interpret {
+public class mr_game_and_watch {
     // public static String clear_1 = "masterchief";
     // public static int key_1 = 117;
     // public static String hash_2 = "264212deff89ade15661a59e7b632872d858f2c6";
@@ -77,7 +77,7 @@ public class interpret {
     }
 
     private static boolean crack_3(Scanner scanner) {
-        System.out.println("Nice work! Here's the last one...\n\t");
+        System.out.print("Nice work! Here's the last one...\n\t");
         String input = scanner.nextLine();
 
         String hash_3 = hash(input, "SHA-256");
