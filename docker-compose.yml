@@ -213,18 +213,18 @@ services:
                         memory: '32M'
             restart: always
             # read_only: true
-    web4:
-            build: ./Web/web4
-            networks:
-                    - default
-            ports:
-                    - "30023:80"
-            deploy:
-                resources:
-                    limits:
-                        cpus: '1.0'
-                        memory: '32M'
-            restart: always
+#     web4:
+#             build: ./Web/web4
+#             networks:
+#                     - default
+#             ports:
+#                     - "30023:80"
+#             deploy:
+#                 resources:
+#                     limits:
+#                         cpus: '1.0'
+#                         memory: '32M'
+#             restart: always
             # read_only: true
 #     web5:
 #             build: ./Web/web5
