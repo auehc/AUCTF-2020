@@ -178,7 +178,7 @@ services:
         restart: always
         read_only: true
     web1:
-            build: ./web/web1
+            build: ./Web/web1
             restart: always
             networks:
                     - default
@@ -192,7 +192,7 @@ services:
             restart: always
             read_only: true
     web2:
-            build: ./web/web2
+            build: ./Web/web2
             restart: always
             networks:
                     - default
@@ -206,7 +206,7 @@ services:
             restart: always
             read_only: true
     web3:
-            build: ./web/web3
+            build: ./Web/web3
             restart: always
             networks:
                     - default
@@ -220,7 +220,7 @@ services:
             restart: always
             read_only: true
     web4:
-            build: ./web/web4
+            build: ./Web/web4
             restart: always
             networks:
                     - default
@@ -234,7 +234,7 @@ services:
             restart: always
             read_only: true
     web5:
-            build: ./web/web5
+            build: ./Web/web5
             restart: always
             networks:
                     - default
