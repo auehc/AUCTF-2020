@@ -8,6 +8,7 @@ void remove_newline(char *buffer);
 
 int main()
 {
+    setvbuf(stdout, NULL, _IONBF, 0);
     printf("Welcome to The Vault!\n\n\tThis challenge is simple answer the questions right and you get the flag!\n");
 
     printf("Be warned however, what you seek may not be here ... \n");
@@ -96,7 +97,15 @@ int check()
 
 void print_flag()
 {
-    printf("Sorry Mario... you're flag is somewhere else\n");
+    char flag[BUFSIZ];
+    FILE *f = fopen("flag.txt", "r");
+    if (f == NULL)
+    {
+        printf("Too bad you can only run this exploit on the server...\n");
+        exit(0);
+    }
+    fgets(flag, BUFSIZ, f);
+    printf("%s", flag);
 }
 
 void remove_newline(char *buffer)

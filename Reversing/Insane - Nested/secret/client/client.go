@@ -7,8 +7,6 @@ import (
 	"os"
 )
 
-const login = "auctf.com:30002"
-
 const sendBuf = "hello can you hear me?"
 const requestFlag = "can i have the flag?"
 

@@ -123,11 +123,24 @@ services:
         restart: always
         read_only: true
     nested:
-        build: "./Reversing/Insane - Nested"
+        build: "./Reversing/Insane - Nested/challenge"
         networks:
             - default
         ports:
-            - "30002:80"
+            - "30006:30006"
+        deploy:
+            resources:
+                limits:
+                    cpus: '1.0'
+                    memory: '32M'
+        restart: always
+        # read_only: true
+    nested_server:
+        build: "./Reversing/Insane - Nested/secret"
+        networks:
+            - default
+        ports:
+            - "30011:80"
         deploy:
             resources:
                 limits:
