@@ -1,6 +1,6 @@
 #include "commandline.h"
 
-char *network_info = "URL: auctf.com, PORT: 30049";
+char *network_info = "URL: challenges.auctf.com, PORT: 30049";
 char *creds = "bucky:longing, rusted, seventeen, daybreak, furnace, nine, benign, homecoming, one, freight car";
 
 int main(int argc, char const *argv[])
