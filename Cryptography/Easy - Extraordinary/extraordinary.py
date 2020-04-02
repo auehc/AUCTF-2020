@@ -21,9 +21,9 @@ def encrypt(msg, seed=None):
     return c
 
 def main():
-    msg = input("> ")
-    print(encrypt(msg))
-
+    while(True):
+        msg = input("> ")
+        print(encrypt(msg))
 
 if __name__ == "__main__":
     main()
