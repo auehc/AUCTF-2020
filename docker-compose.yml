@@ -174,19 +174,19 @@ services:
                     memory: '32M'
         restart: always
         read_only: true
-    pick_your_poison:
-        build: "./Cryptography/Medium - Pick Your Poison"
-        networks:
-                -  default
-        ports:
-                - "30031:30031"
-        deploy:
-            resources:
-                limits:
-                    cpus: '1.0'
-                    memory: '32M'
-        restart: always
-        read_only: true
+    # pick_your_poison:
+    #     build: "./Cryptography/Medium - Pick Your Poison"
+    #     networks:
+    #             -  default
+    #     ports:
+    #             - "30031:30031"
+    #     deploy:
+    #         resources:
+    #             limits:
+    #                 cpus: '1.0'
+    #                 memory: '32M'
+    #     restart: always
+    #     read_only: true
     web1:
             build: ./Web/web1
             networks:
