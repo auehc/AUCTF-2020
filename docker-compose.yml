@@ -11,11 +11,11 @@ services:
             - default
         ports:
             - "30010:30010"
-        deploy:
-            resources:
-                limits:
-                    cpus: '1.0'
-                    memory: '32M'
+              #deploy:
+              #resources:
+              #  limits:
+              #      cpus: '1.0'
+              #      memory: '32M'
         restart: always
         read_only: true
     overwrite:
@@ -63,11 +63,11 @@ services:
                     -  default
             ports:
                     - "30040:22"
-            deploy:
-                resources:
-                    limits:
-                        cpus: '1.0'
-                        memory: '32M'
+                      #deploy:
+                      # resources:
+                      #limits:
+                      #  cpus: '1.0'
+                      #  memory: '32M'
             restart: always
             # read_only: true
     crack:

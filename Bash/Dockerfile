@@ -8,8 +8,10 @@ run apt-get update && apt-get install -y openssh-server sudo vim netcat && mkdir
   | chpasswd && echo "level5:auctf{FunKy_P3rm1ssi0nZ}" | chpasswd \
   && echo "level2 ALL=(level3) NOPASSWD:/home/level2/random_dirs.sh" >> /etc/sudoers \
   && echo "level3 ALL=(level4) NOPASSWD:/home/level3/passcodes.sh" >> /etc/sudoers \
+  && echo "level4 ALL=(level5) NOPASSWD:/home/level4/print_file.sh" >> /etc/sudoers \
   && echo "level5 ALL=(ALL) NOPASSWD:/home/level5/portforce.sh" >> /etc/sudoers
 
+run rm -rf /usr/bin/wall
 
 add level1 /home/level1
 add level2 /home/level2
