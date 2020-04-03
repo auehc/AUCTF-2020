@@ -168,9 +168,10 @@ void room4()
 }
 char get_input(char prompt[])
 {
-    char choice[2];
+    char choice[8];
     printf("%s", prompt);
-    fgets(choice, 2, stdin);
+    fgets(choice, 8, stdin);
+
     remove_newline(choice);
     return choice[0];
 }
