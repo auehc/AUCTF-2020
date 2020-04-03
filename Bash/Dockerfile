@@ -1,11 +1,11 @@
 from ubuntu:latest
 
-run apt-get update && apt-get install -y openssh-server sudo vim && mkdir /var/run/sshd && \
+run apt-get update && apt-get install -y openssh-server sudo vim netcat && mkdir /var/run/sshd && \
   echo "root:campbellsnowvanrellharper" | chpasswd && useradd -m level1 && \
   useradd -m level2 && useradd -m level3 && useradd -m level4 && useradd -m level5 && \
   echo "level1:aubie" | chpasswd && echo "level2:auctf{W3lcoM3_2_da_C7F}" | chpasswd && \
   echo "level3:auctf{g0tt@_muv_fas7}" | chpasswd && echo "level4:auctf{wut_r_d33z_RaNdom_numz}" \
-  | chpasswd && echo "level5:auctf{n3tc@_purt_\$can}" | chpasswd \
+  | chpasswd && echo "level5:auctf{FunKy_P3rm1ssi0nZ}" | chpasswd \
   && echo "level2 ALL=(level3) NOPASSWD:/home/level2/random_dirs.sh" >> /etc/sudoers \
   && echo "level3 ALL=(level4) NOPASSWD:/home/level3/passcodes.sh" >> /etc/sudoers \
   && echo "level5 ALL=(ALL) NOPASSWD:/home/level5/portforce.sh" >> /etc/sudoers
