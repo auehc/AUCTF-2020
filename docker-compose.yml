@@ -24,11 +24,11 @@ services:
             - default
         ports:
             - "30011:30011"
-        deploy:
-            resources:
-                limits:
-                    cpus: '1.0'
-                    memory: '32M'
+              #deploy:
+              #resources:
+              #  limits:
+              #      cpus: '1.0'
+              #      memory: '32M'
         restart: always
         read_only: true
     indirection:
@@ -37,11 +37,11 @@ services:
             - default
         ports:
             - "30012:30012"
-        deploy:
-            resources:
-                limits:
-                    cpus: '1.0'
-                    memory: '32M'
+              #deploy:
+              #resources:
+              #  limits:
+              #      cpus: '1.0'
+              #      memory: '32M'
         restart: always
         read_only: true
     house:
@@ -50,11 +50,11 @@ services:
             - default
         ports:
             - "30013:30013"
-        deploy:
-            resources:
-                limits:
-                    cpus: '1.0'
-                    memory: '32M'
+              #deploy:
+              #resources:
+              #  limits:
+              #      cpus: '1.0'
+              #      memory: '32M'
         restart: always
         read_only: true
     bash:
@@ -76,11 +76,11 @@ services:
             - default
         ports:
             - "30000:30000"
-        deploy:
-            resources:
-                limits:
-                    cpus: '1.0'
-                    memory: '32M'
+              #deploy:
+              #resources:
+              #  limits:
+              #      cpus: '1.0'
+              #      memory: '32M'
         restart: always
         read_only: true
     interpret:
@@ -89,11 +89,11 @@ services:
             - default
         ports:
             - "30001:30001"
-        deploy:
-            resources:
-                limits:
-                    cpus: '1.0'
-                    memory: '32M'
+              #deploy:
+              #resources:
+              #  limits:
+              #      cpus: '1.0'
+              #      memory: '32M'
         restart: always
         read_only: true
     keygen:
@@ -102,11 +102,11 @@ services:
             - default
         ports:
             - "30004:30004"
-        deploy:
-            resources:
-                limits:
-                    cpus: '1.0'
-                    memory: '32M'
+              #deploy:
+              # resources:
+              # limits:
+              #     cpus: '1.0'
+              #     memory: '32M'
         restart: always
         read_only: true
     nodbg:
@@ -115,11 +115,11 @@ services:
             - default
         ports:
             - "30005:30005"
-        deploy:
-            resources:
-                limits:
-                    cpus: '1.0'
-                    memory: '32M'
+              # deploy:
+              #resources:
+              # limits:
+              #     cpus: '1.0'
+              #     memory: '32M'
         restart: always
         read_only: true
     nested:
@@ -128,11 +128,11 @@ services:
             - default
         ports:
             - "30006:30006"
-        deploy:
-            resources:
-                limits:
-                    cpus: '1.0'
-                    memory: '32M'
+              #deploy:
+              #resources:
+              # limits:
+              #     cpus: '1.0'
+              #     memory: '32M'
         restart: always
         # read_only: true
     nested_server:
@@ -141,11 +141,11 @@ services:
             - default
         ports:
             - "30009:80"
-        deploy:
-            resources:
-                limits:
-                    cpus: '1.0'
-                    memory: '32M'
+              #deploy:
+              #resources:
+              #  limits:
+              #      cpus: '1.0'
+              #      memory: '32M'
         restart: always
         # read_only: true
     encrypted:
@@ -154,11 +154,11 @@ services:
             - default
         ports:
             - "30049:30049"
-        deploy:
-            resources:
-                limits:
-                    cpus: '1.0'
-                    memory: '32M'
+              #deploy:
+              #resources:
+              #  limits:
+              #      cpus: '1.0'
+              #      memory: '32M'
         restart: always
         read_only: true
     extraordinary:
@@ -167,11 +167,11 @@ services:
                 -  default
         ports:
                 - "30030:30030"
-        deploy:
-            resources:
-                limits:
-                    cpus: '1.0'
-                    memory: '32M'
+                  #deploy:
+                  #resources:
+                  #limits:
+                  #  cpus: '1.0'
+                  #  memory: '32M'
         restart: always
         read_only: true
     # pick_your_poison:
@@ -193,11 +193,11 @@ services:
                     - default
             ports:
                     - "30020:80"
-            deploy:
-                resources:
-                    limits:
-                        cpus: '1.0'
-                        memory: '32M'
+                      #deploy:
+                      #resources:
+                      #limits:
+                      #  cpus: '1.0'
+                      #  memory: '32M'
             restart: always
             # read_only: true
     web2:
@@ -206,11 +206,11 @@ services:
                     - default
             ports:
                     - "30021:80"
-            deploy:
-                resources:
-                    limits:
-                        cpus: '1.0'
-                        memory: '32M'
+                      #deploy:
+                      #resources:
+                      #limits:
+                      #  cpus: '1.0'
+                      #  memory: '32M'
             restart: always
             # read_only: true
     web3:
@@ -219,11 +219,11 @@ services:
                     - default
             ports:
                     - "30022:80"
-            deploy:
-                resources:
-                    limits:
-                        cpus: '1.0'
-                        memory: '32M'
+                      #deploy:
+                      #resources:
+                      #limits:
+                      #  cpus: '1.0'
+                      #  memory: '32M'
             restart: always
             # read_only: true
 #     web4:

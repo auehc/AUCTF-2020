@@ -1,0 +1,1 @@
+sudo docker container stop $(sudo docker ps --filter name=auctf-2020_web2[_]?[1-9]? | tail -n1 | cut -f1 -d " ") && sudo docker container prune -f && sudo docker run -dit -p 30021:80 --name auctf-2020_web2 auctf-2020_web2
