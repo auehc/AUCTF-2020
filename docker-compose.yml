@@ -31,7 +31,7 @@ services:
               #      memory: '32M'
         restart: always
         read_only: true
-    indirection:
+    house:
         build: "./Pwn/Medium - Leap Frog"
         networks:
             - default
@@ -44,7 +44,7 @@ services:
               #      memory: '32M'
         restart: always
         read_only: true
-    house:
+    indirection:
         build: "./Pwn/Hard - Indirection"
         networks:
             - default
