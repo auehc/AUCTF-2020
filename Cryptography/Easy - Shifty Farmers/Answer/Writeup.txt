@@ -1,3 +1,9 @@
-This is vignere cipher with a key value of 'MANUALREQUIRED'
+This is vignere cipher with a key value of 'COINCIDENCESMAYHELPYOUSOLVETHISPROBLEM'
 
-I did not reveal the key, because I want them to count coincidences and solve the problem manually.
+I did not reveal the key. The intended approach is to count coincidences to figure out the length of the vigenere key, and then run frequency analysis on the given cipher text. From that, you should be able to determine the 
+
+The flag is included within the decrypted plaintext:
+
+The answer is  the following: sometimes you have to do things yourself. Replaces the spaces with underscores and wrap it in the usual format.
+
+auctf{sometimes_you_have_to_do_things_yourself}
