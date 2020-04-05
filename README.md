@@ -2,22 +2,13 @@
 
 ## Categories
 
-### OSINT
-
-### Crypto
-
-### Misc
-
-### BASH
-
-### Reversing
-
-### Pwn
-
-### Web
-
-### Forensics
-
-### Password Cracking
-
-### Signal
+- OSINT
+- Crypto
+- Misc
+- BASH
+- Reversing
+- Pwn
+- Web
+- Forensics
+- Password Cracking
+- Signal
