@@ -1,4 +1,4 @@
-version: '3.3'
+version: "3.3"
 
 # Ensure ASLR Is off!! echo 0 > /proc/sys/kernel/randomize_va_space
 # Run docker-compose with --compatibility switch
@@ -6,153 +6,153 @@ version: '3.3'
 # sudo docker-compose --compatibility down
 services:
     shell:
-        build: "./Pwn/Easy - Pyshell"
+        build: "./Pwn/Eas as Pie!"
         networks:
             - default
         ports:
             - "30010:30010"
         deploy:
-                resources:
-                  limits:
-                    cpus: '1.0'
-              #deploy:
-              #resources:
-              #  limits:
-              #      cpus: '1.0'
-              #      memory: '32M'
+            resources:
+                limits:
+                    cpus: "1.0"
+            #deploy:
+            #resources:
+            #  limits:
+            #      cpus: '1.0'
+            #      memory: '32M'
         restart: always
         read_only: true
     overwrite:
-        build: "./Pwn/Easy - Overwrite"
+        build: "./Pwn/Thanksgiving Dinner"
         networks:
             - default
         ports:
             - "30011:30011"
         deploy:
-                resources:
-                  limits:
-                    cpus: '1.0'
-              #deploy:
-              #resources:
-              #  limits:
-              #      cpus: '1.0'
-              #      memory: '32M'
+            resources:
+                limits:
+                    cpus: "1.0"
+            #deploy:
+            #resources:
+            #  limits:
+            #      cpus: '1.0'
+            #      memory: '32M'
         restart: always
         read_only: true
     house:
-        build: "./Pwn/Medium - Leap Frog"
+        build: "./Pwn/House of Madness"
         networks:
             - default
         ports:
             - "30012:30012"
         deploy:
-                resources:
-                  limits:
-                    cpus: '1.0'
-              #deploy:
-              #resources:
-              #  limits:
-              #      cpus: '1.0'
-              #      memory: '32M'
+            resources:
+                limits:
+                    cpus: "1.0"
+            #deploy:
+            #resources:
+            #  limits:
+            #      cpus: '1.0'
+            #      memory: '32M'
         restart: always
         read_only: true
     indirection:
-        build: "./Pwn/Hard - Indirection"
+        build: "./Pwn/Remote School"
         networks:
             - default
         ports:
             - "30013:30013"
         deploy:
-                resources:
-                  limits:
-                    cpus: '1.0'
-              #deploy:
-              #resources:
-              #  limits:
-              #      cpus: '1.0'
-              #      memory: '32M'
+            resources:
+                limits:
+                    cpus: "1.0"
+            #deploy:
+            #resources:
+            #  limits:
+            #      cpus: '1.0'
+            #      memory: '32M'
         restart: always
         read_only: true
     bash:
-            build: ./Bash
-            networks:
-                    -  default
-            ports:
-                    - "30040:22"
-            deploy:
-                 resources:
-                      limits:
-                         cpus: '3.0'
-                         memory: '64M'
-            restart: always
-            # read_only: true
+        build: ./Bash
+        networks:
+            - default
+        ports:
+            - "30040:22"
+        deploy:
+            resources:
+                limits:
+                    cpus: "3.0"
+                    memory: "64M"
+        restart: always
+        # read_only: true
     crack:
-        build: "./Reversing/Easy - Crackme"
+        build: "./Reversing/Cracker Barrel"
         networks:
             - default
         ports:
             - "30000:30000"
         deploy:
-              resources:
+            resources:
                 limits:
-                    cpus: '3.0'
-              #      memory: '32M'
+                    cpus: "3.0"
+            #      memory: '32M'
         restart: always
         read_only: true
     interpret:
-        build: "./Reversing/Medium - Interpreter"
+        build: "./Reversing/Mr. Game and Watch"
         networks:
             - default
         ports:
             - "30001:30001"
         deploy:
-              resources:
+            resources:
                 limits:
-                    cpus: '3.0'
-              #      memory: '32M'
+                    cpus: "3.0"
+            #      memory: '32M'
         restart: always
         read_only: true
     keygen:
-        build: "./Reversing/Hard - Keygen"
+        build: "./Reversing/Sora"
         networks:
             - default
         ports:
             - "30004:30004"
         deploy:
-              resources:
+            resources:
                 limits:
-                  cpus: '3.0'
-              #     memory: '32M'
+                    cpus: "3.0"
+            #     memory: '32M'
         restart: always
         read_only: true
     nodbg:
-        build: "./Reversing/Hard - No Debugger"
+        build: "./Reversing/Don't Break Me!"
         networks:
             - default
         ports:
             - "30005:30005"
         deploy:
-           resources:
-               limits:
-                 cpus: '3.0'
-              #     memory: '32M'
+            resources:
+                limits:
+                    cpus: "3.0"
+                #     memory: '32M'
         restart: always
         read_only: true
     nested:
-        build: "./Reversing/Insane - Nested/challenge"
+        build: "./Reversing/Chestburster/challenge"
         networks:
             - default
         ports:
             - "30006:30006"
         deploy:
             resources:
-               limits:
-                   cpus: '3.0'
-              #     memory: '32M'
+                limits:
+                    cpus: "3.0"
+                #     memory: '32M'
         restart: always
         # read_only: true
     nested_server:
-        build: "./Reversing/Insane - Nested/secret"
+        build: "./Reversing/Chestburster/secret"
         networks:
             - default
         ports:
@@ -160,41 +160,41 @@ services:
               #deploy:
         deploy:
             resources:
-               limits:
-                   cpus: '3.0'
-              #resources:
-              #  limits:
-              #      cpus: '1.0'
-              #      memory: '32M'
+                limits:
+                    cpus: "3.0"
+                #resources:
+                #  limits:
+                #      cpus: '1.0'
+                #      memory: '32M'
         restart: always
         # read_only: true
     encrypted:
-        build: "./Reversing/Medium - Encrypted"
+        build: "./Reversing/Purple Socks"
         networks:
             - default
         ports:
             - "30049:30049"
         deploy:
             resources:
-               limits:
-                   cpus: '3.0'
-              #resources:
-              #  limits:
-              #      cpus: '1.0'
-              #      memory: '32M'
+                limits:
+                    cpus: "3.0"
+                #resources:
+                #  limits:
+                #      cpus: '1.0'
+                #      memory: '32M'
         restart: always
         read_only: true
     extraordinary:
         build: "./Cryptography/Easy - Extraordinary"
         networks:
-                -  default
+            - default
         ports:
-                - "30030:30030"
+            - "30030:30030"
         deploy:
-                resources:
-                  limits:
-                    cpus: '1.0'
-                    memory: '32M'
+            resources:
+                limits:
+                    cpus: "1.0"
+                    memory: "32M"
         restart: always
         read_only: true
     # pick_your_poison:
@@ -211,56 +211,59 @@ services:
     #     restart: always
     #     read_only: true
     web1:
-            build: ./Web/web1
-            networks:
-                    - default
-            ports:
-                    - "30020:80"
-            deploy:
-                resources:
-                  limits:
-                    cpus: '1.0'
-                      #deploy:
-                      #resources:
-                      #limits:
-                      #  cpus: '1.0'
-                      #  memory: '32M'
-            restart: always
-            # read_only: true
+        build: ./Web/web1
+        networks:
+            - default
+        ports:
+            - "30020:80"
+        deploy:
+            resources:
+                limits:
+                    cpus:
+                        "1.0"
+                        #deploy:
+                        #resources:
+                        #limits:
+                        #  cpus: '1.0'
+                        #  memory: '32M'
+        restart: always
+        # read_only: true
     web2:
-            build: ./Web/web2
-            networks:
-                    - default
-            ports:
-                    - "30021:80"
-            deploy:
-                resources:
-                  limits:
-                    cpus: '1.0'
-                      #deploy:
-                      #resources:
-                      #limits:
-                      #  cpus: '1.0'
-                      #  memory: '32M'
-            restart: always
-            # read_only: true
+        build: ./Web/web2
+        networks:
+            - default
+        ports:
+            - "30021:80"
+        deploy:
+            resources:
+                limits:
+                    cpus:
+                        "1.0"
+                        #deploy:
+                        #resources:
+                        #limits:
+                        #  cpus: '1.0'
+                        #  memory: '32M'
+        restart: always
+        # read_only: true
     web3:
-            build: ./Web/web3
-            networks:
-                    - default
-            ports:
-                    - "30022:80"
-            deploy:
-                resources:
-                  limits:
-                    cpus: '1.0'
-                      #deploy:
-                      #resources:
-                      #limits:
-                      #  cpus: '1.0'
-                      #  memory: '32M'
-            restart: always
-            # read_only: true
+        build: ./Web/web3
+        networks:
+            - default
+        ports:
+            - "30022:80"
+        deploy:
+            resources:
+                limits:
+                    cpus:
+                        "1.0"
+                        #deploy:
+                        #resources:
+                        #limits:
+                        #  cpus: '1.0'
+                        #  memory: '32M'
+        restart: always
+        # read_only: true
 #     web4:
 #             build: ./Web/web4
 #             networks:
@@ -273,7 +276,7 @@ services:
 #                         cpus: '1.0'
 #                         memory: '32M'
 #             restart: always
-            # read_only: true
+# read_only: true
 #     web5:
 #             build: ./Web/web5
 #             networks:
@@ -286,4 +289,4 @@ services:
 #                         cpus: '1.0'
 #                         memory: '32M'
 #             restart: always
-            # read_only: true
+# read_only: true

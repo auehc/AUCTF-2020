@@ -1,0 +1,6 @@
+Extract the .gz file to reveal a sql dump, inside the table there is a .7z file containing an image. Import the mySQL table to reassemble the 7z file.
+sudo mysql -u user -p'fdsafds' -e "USE test; SELECT image FROM images INTO DUMPFILE '/tmp/boom';"
+Extract the 7z file to reveal the image. Finally, decrease the brightness and increase the contrast of the image to reveal the flag.
+https://gchq.github.io/CyberChef/#recipe=Image_Brightness_/_Contrast(-58,50)
+
+Flag: auctf{B00M_!!}
