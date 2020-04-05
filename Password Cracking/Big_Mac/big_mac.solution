@@ -1,1 +1,2 @@
+This was a HMAC-SHA1 hash. You need to make sure the hash was in the proper hash:salt format.
 hashcat -a 0 -m 160 big_mac.hash rockyou.txt
