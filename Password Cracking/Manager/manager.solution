@@ -1,2 +1,4 @@
 keepass2john manager.kdbx > manager.hash
 hashcat64 -a 3 -m 13400 manager.hash ?d?d?d?d?d?d
+
+You could also use the --increment argument in hahscat to automatically increment the amount of digits being tested.
