@@ -82,8 +82,8 @@ services:
             deploy:
                  resources:
                       limits:
-                         cpus: '1.0'
-                         memory: '32M'
+                         cpus: '3.0'
+                         memory: '64M'
             restart: always
             # read_only: true
     crack:
