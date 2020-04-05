@@ -18,3 +18,4 @@ Further runs can just use `sudo ./up.sh`
 - Forensics
 - Password Cracking
 - Signal
+- Sequence
