@@ -10,4 +10,6 @@ ROT47 uses a larger set of characters from the common character encoding known a
 
 ROT47: 2F4E7L3FC?0E9603@@<DPP`PN
 
+Alternatively you can CTRL-A the whole text and look for anything out of place and then identify the cipher.
+
 Flag: auctf{burn_the_books!!1!}
