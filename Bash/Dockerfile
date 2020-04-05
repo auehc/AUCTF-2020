@@ -1,6 +1,6 @@
 from ubuntu:latest
 
-run apt-get update && apt-get install -y openssh-server sudo vim netcat && mkdir /var/run/sshd && \
+run apt-get update && apt-get install -y openssh-server sudo vim netcat nano && mkdir /var/run/sshd && \
   echo "root:campbellsnowvanrellharper" | chpasswd && useradd -m level1 && \
   useradd -m level2 && useradd -m level3 && useradd -m level4 && useradd -m level5 && \
   echo "level1:aubie" | chpasswd && echo "level2:auctf{W3lcoM3_2_da_C7F}" | chpasswd && \
@@ -28,8 +28,8 @@ run chown level3:level2 /home/level2/random_dirs.sh && chmod 550 /home/level2/ra
   && chmod 550 /home/level4/print_file.sh && chmod 2550 /home/level4/level4_runner \
   && chown root:root /home/level5/flag.txt && chown root:level5 /home/level5/portforce.sh \
   && chmod 440 /home/level5/flag.txt && chmod 550 /home/level5/portforce.sh \
-  && chmod 2550 /home/level5/level5_runner && chmod -w /home/* && chmod o-r /home/* \
-  && rm /home/*/*.c && rm /home/*/*_runner
+  && chmod 2550 /home/level5/level5_runner && chmod -w /home/* &&  rm /home/*/*.c \
+  && rm /home/*/*_runner && chown root:root /home/* 
 
 expose 22
 cmd ["/usr/sbin/sshd", "-D"]

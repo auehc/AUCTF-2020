@@ -167,11 +167,11 @@ services:
                 -  default
         ports:
                 - "30030:30030"
-                  #deploy:
-                  #resources:
-                  #limits:
-                  #  cpus: '1.0'
-                  #  memory: '32M'
+        deploy:
+                resources:
+                  limits:
+                    cpus: '1.0'
+                    memory: '32M'
         restart: always
         read_only: true
     # pick_your_poison:
