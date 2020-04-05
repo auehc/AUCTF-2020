@@ -87,7 +87,7 @@ services:
             restart: always
             # read_only: true
     crack:
-        build: "./Reversing/Easy - Crackme"
+        build: "./Reversing/Cracker Barrel"
         networks:
             - default
         ports:
@@ -100,7 +100,7 @@ services:
         restart: always
         read_only: true
     interpret:
-        build: "./Reversing/Medium - Interpreter"
+        build: "./Reversing/Mr. Game and Watch"
         networks:
             - default
         ports:
@@ -113,7 +113,7 @@ services:
         restart: always
         read_only: true
     keygen:
-        build: "./Reversing/Hard - Keygen"
+        build: "./Reversing/Sora"
         networks:
             - default
         ports:
@@ -126,7 +126,7 @@ services:
         restart: always
         read_only: true
     nodbg:
-        build: "./Reversing/Hard - No Debugger"
+        build: "./Reversing/Don't Break Me!"
         networks:
             - default
         ports:
@@ -139,7 +139,7 @@ services:
         restart: always
         read_only: true
     nested:
-        build: "./Reversing/Insane - Nested/challenge"
+        build: "./Reversing/Chestburster/challenge"
         networks:
             - default
         ports:
@@ -152,7 +152,7 @@ services:
         restart: always
         # read_only: true
     nested_server:
-        build: "./Reversing/Insane - Nested/secret"
+        build: "./Reversing/Chestburster/secret"
         networks:
             - default
         ports:
@@ -169,7 +169,7 @@ services:
         restart: always
         # read_only: true
     encrypted:
-        build: "./Reversing/Medium - Encrypted"
+        build: "./Reversing/Purple Socks"
         networks:
             - default
         ports:
