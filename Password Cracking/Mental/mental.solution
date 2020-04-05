@@ -10,3 +10,5 @@ Append fruit.list
 Generate final list, mine was called mental.dict
 
 hashcat -m 0 -a 0 mental.hash mental.dict
+
+If your base wordlists do not have the first letter of each category capitalized, then you can use hashcat rules.
