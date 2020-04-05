@@ -17,5 +17,5 @@ hashcat -m 0 -a 0 keanu.hash keanu.dict
 For hashcat rules:
 Use T0XlC-insert_00-99_1950-2050_toprules_0_F.rule and leetspeak.rule.
 Both of these rules are included with hashcat.
-(Some people made scripts to cycle automatically cycle through and apply the default hashcat rules.)
+(Some people made scripts to automatically cycle through and apply the default hashcat rules.)
 hashcat -a 0 -m 0 -r /rules/T0XlC-insert_00-99_1950-2050_toprules_0_F.rule -r /rules/leetspeak.rule keanu.hash keanu.list
