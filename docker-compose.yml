@@ -6,7 +6,7 @@ version: "3.3"
 # sudo docker-compose --compatibility down
 services:
     shell:
-        build: "./Pwn/Easy - Pyshell"
+        build: "./Pwn/Eas as Pie!"
         networks:
             - default
         ports:
@@ -23,7 +23,7 @@ services:
         restart: always
         read_only: true
     overwrite:
-        build: "./Pwn/Easy - Overwrite"
+        build: "./Pwn/Thanksgiving Dinner"
         networks:
             - default
         ports:
@@ -40,7 +40,7 @@ services:
         restart: always
         read_only: true
     house:
-        build: "./Pwn/Medium - Leap Frog"
+        build: "./Pwn/House of Madness"
         networks:
             - default
         ports:
@@ -57,7 +57,7 @@ services:
         restart: always
         read_only: true
     indirection:
-        build: "./Pwn/Hard - Indirection"
+        build: "./Pwn/Remote School"
         networks:
             - default
         ports:
