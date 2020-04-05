@@ -2,105 +2,22 @@
 
 ## Categories
 
-### OSINT: Charlie
+### OSINT
 
-* [x]  Easy
-* [x]  Easy
-* [x]  Medium
-* [x]  Medium
-* [x]  Hard
+### Crypto
 
-### Crypto: Charlie
+### Misc
 
-* [X]  Easy
-* [X]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
+### BASH
 
-### Misc: Ethan
+### Reversing
 
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
+### Pwn
 
-### BASH: DeMarcus
+### Web
 
-* [x]  Easy
-* [x]  Easy
-* [x]  Medium
-* [x]  Medium
-* [x]  Hard
+### Forensics
 
-### Reversing: Jordan / Kensocolo
+### Password Cracking
 
-
-* [x]  Crackme
-* [x]  Encoded Binary
-* [x]  Interpreted
-* [x]  Resource
-* [x]  Keygen
-* [x]  Assembly
-* [ ]  Execution Flow
-* [x]  Debug
-
-
-
-### Pwn: Jordan / Kensoscolo
-
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
-
-### Web: DeMarcus
-
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
-
-
-### Pentesting: DeMarcus / Drew / Kensocolo
-
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
-
-### Forensics: Vincent
-
-* [x]  Easy
-* [x]  Easy
-* [x]  Medium
-* [x]  Medium
-* [x]  Hard
-
-### Password Cracking: Zach
-
-* [x]  Easy
-* [x]  Easy
-* [x]  Medium
-* [x]  Medium
-* [x]  Hard
-
-### Physical: Charlie
-
-* [x]  Easy
-* [x]  Easy
-* [x]  Medium
-* [x]  Medium
-* [x]  Hard
-
-### Signal: Drew
-
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
+### Signal
