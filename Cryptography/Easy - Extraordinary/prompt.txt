@@ -1,3 +1,7 @@
-On their way back from the market, Alice and Bob noticed an little device on the ground. Next to it was a piece of paper with what looked like a bunch of scrambled numbers on it. It looked completely random. They took it to the lost and found, but on their way they played with it a little bit, don't tell anyone. The device was never picked up, so we get to play with it. Can you figure out how the device works?
+On their way back from the market, Alice and Bob noticed a little device on the ground. Next to it was a piece of paper with what looked like a bunch of scrambled numbers on it. It looked completely random. They took it to the lost and found, but on their way they played with it a little bit (don't tell anyone!). The device was never picked up, so we get to play with it a little bit, too. Can you figure out how the device works?
 
-ssh ctf.auburn.edu -p 7777
+`b'6\x1d\x0cT*\x12\x18V\x05\x13c1R\x07u#\x021Jq\x05\x02n\x03t%1\\\x04@V7P\\\x17aN'`
+
+`nc challenges.auctf.com 30030`
+
+Author: c
