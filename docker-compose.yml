@@ -11,6 +11,10 @@ services:
             - default
         ports:
             - "30010:30010"
+        deploy:
+                resources:
+                  limits:
+                    cpus: '1.0'
               #deploy:
               #resources:
               #  limits:
@@ -24,6 +28,10 @@ services:
             - default
         ports:
             - "30011:30011"
+        deploy:
+                resources:
+                  limits:
+                    cpus: '1.0'
               #deploy:
               #resources:
               #  limits:
@@ -37,6 +45,10 @@ services:
             - default
         ports:
             - "30012:30012"
+        deploy:
+                resources:
+                  limits:
+                    cpus: '1.0'
               #deploy:
               #resources:
               #  limits:
@@ -50,6 +62,10 @@ services:
             - default
         ports:
             - "30013:30013"
+        deploy:
+                resources:
+                  limits:
+                    cpus: '1.0'
               #deploy:
               #resources:
               #  limits:
@@ -63,11 +79,11 @@ services:
                     -  default
             ports:
                     - "30040:22"
-                      #deploy:
-                      # resources:
-                      #limits:
-                      #  cpus: '1.0'
-                      #  memory: '32M'
+            deploy:
+                 resources:
+                      limits:
+                         cpus: '1.0'
+                         memory: '32M'
             restart: always
             # read_only: true
     crack:
@@ -76,10 +92,10 @@ services:
             - default
         ports:
             - "30000:30000"
-              #deploy:
-              #resources:
-              #  limits:
-              #      cpus: '1.0'
+        deploy:
+              resources:
+                limits:
+                    cpus: '3.0'
               #      memory: '32M'
         restart: always
         read_only: true
@@ -89,10 +105,10 @@ services:
             - default
         ports:
             - "30001:30001"
-              #deploy:
-              #resources:
-              #  limits:
-              #      cpus: '1.0'
+        deploy:
+              resources:
+                limits:
+                    cpus: '3.0'
               #      memory: '32M'
         restart: always
         read_only: true
@@ -102,10 +118,10 @@ services:
             - default
         ports:
             - "30004:30004"
-              #deploy:
-              # resources:
-              # limits:
-              #     cpus: '1.0'
+        deploy:
+              resources:
+                limits:
+                  cpus: '3.0'
               #     memory: '32M'
         restart: always
         read_only: true
@@ -115,10 +131,10 @@ services:
             - default
         ports:
             - "30005:30005"
-              # deploy:
-              #resources:
-              # limits:
-              #     cpus: '1.0'
+        deploy:
+           resources:
+               limits:
+                 cpus: '3.0'
               #     memory: '32M'
         restart: always
         read_only: true
@@ -128,10 +144,10 @@ services:
             - default
         ports:
             - "30006:30006"
-              #deploy:
-              #resources:
-              # limits:
-              #     cpus: '1.0'
+        deploy:
+            resources:
+               limits:
+                   cpus: '3.0'
               #     memory: '32M'
         restart: always
         # read_only: true
@@ -142,6 +158,10 @@ services:
         ports:
             - "30009:80"
               #deploy:
+        deploy:
+            resources:
+               limits:
+                   cpus: '3.0'
               #resources:
               #  limits:
               #      cpus: '1.0'
@@ -154,7 +174,10 @@ services:
             - default
         ports:
             - "30049:30049"
-              #deploy:
+        deploy:
+            resources:
+               limits:
+                   cpus: '3.0'
               #resources:
               #  limits:
               #      cpus: '1.0'
@@ -193,6 +216,10 @@ services:
                     - default
             ports:
                     - "30020:80"
+            deploy:
+                resources:
+                  limits:
+                    cpus: '1.0'
                       #deploy:
                       #resources:
                       #limits:
@@ -206,6 +233,10 @@ services:
                     - default
             ports:
                     - "30021:80"
+            deploy:
+                resources:
+                  limits:
+                    cpus: '1.0'
                       #deploy:
                       #resources:
                       #limits:
@@ -219,6 +250,10 @@ services:
                     - default
             ports:
                     - "30022:80"
+            deploy:
+                resources:
+                  limits:
+                    cpus: '1.0'
                       #deploy:
                       #resources:
                       #limits:
