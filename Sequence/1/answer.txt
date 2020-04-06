@@ -1,3 +1,4 @@
 1366, 1368, 1374, 1378, 1380
 
 Subtract 1337 from the numbers and then it becomes a prime sequence starting at 11
+
