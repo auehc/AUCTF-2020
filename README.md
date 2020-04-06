@@ -17,5 +17,5 @@ Further runs can just use `sudo ./up.sh`
 - Web
 - Forensics
 - Password Cracking
-- Signal
+- Signals
 - Sequence
