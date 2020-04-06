@@ -5,10 +5,13 @@ Open vhdx file using 7zip or alternatively you can binwalk and extract the initr
 
 Extract initrd.gz
 ```file initrd```
+
 Extract the cpio archive
 ```cpio -idv < initrd```
+
 Flag is hidden as the 'cat' binary in /bin/ 
 ```cd /bin/ && cat ./cat```
+
 siica{rul_nbkf_vsrnog_vx}
 
 My friend 'c' who is chharles on Github: 
