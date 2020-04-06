@@ -15,7 +15,9 @@ Flag is hidden as the 'cat' binary in /bin/
 siica{rul_nbkf_vsrnog_vx}
 
 My friend 'c' who is chharles on Github: 
+
 https://github.com/chharles/AUCTF-2020/commits/master
+
 use the key.txt "soGJvcjTknXM" to solve the Vigenère cipher
 
 
