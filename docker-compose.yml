@@ -15,11 +15,6 @@ services:
             resources:
                 limits:
                     cpus: "1.0"
-            #deploy:
-            #resources:
-            #  limits:
-            #      cpus: '1.0'
-            #      memory: '32M'
         restart: always
         read_only: true
     overwrite:
@@ -32,11 +27,6 @@ services:
             resources:
                 limits:
                     cpus: "1.0"
-            #deploy:
-            #resources:
-            #  limits:
-            #      cpus: '1.0'
-            #      memory: '32M'
         restart: always
         read_only: true
     house:
@@ -49,11 +39,6 @@ services:
             resources:
                 limits:
                     cpus: "1.0"
-            #deploy:
-            #resources:
-            #  limits:
-            #      cpus: '1.0'
-            #      memory: '32M'
         restart: always
         read_only: true
     indirection:
@@ -66,11 +51,6 @@ services:
             resources:
                 limits:
                     cpus: "1.0"
-            #deploy:
-            #resources:
-            #  limits:
-            #      cpus: '1.0'
-            #      memory: '32M'
         restart: always
         read_only: true
     bash:
@@ -85,7 +65,6 @@ services:
                     cpus: "3.0"
                     memory: "64M"
         restart: always
-        # read_only: true
     crack:
         build: "./Reversing/Cracker Barrel"
         networks:
@@ -96,7 +75,6 @@ services:
             resources:
                 limits:
                     cpus: "3.0"
-            #      memory: '32M'
         restart: always
         read_only: true
     interpret:
@@ -108,8 +86,6 @@ services:
         deploy:
             resources:
                 limits:
-                    cpus: "3.0"
-            #      memory: '32M'
         restart: always
         read_only: true
     keygen:
@@ -122,7 +98,6 @@ services:
             resources:
                 limits:
                     cpus: "3.0"
-            #     memory: '32M'
         restart: always
         read_only: true
     nodbg:
@@ -135,7 +110,6 @@ services:
             resources:
                 limits:
                     cpus: "3.0"
-                #     memory: '32M'
         restart: always
         read_only: true
     nested:
@@ -148,26 +122,18 @@ services:
             resources:
                 limits:
                     cpus: "3.0"
-                #     memory: '32M'
         restart: always
-        # read_only: true
     nested_server:
         build: "./Reversing/Chestburster/secret"
         networks:
             - default
         ports:
             - "30009:80"
-              #deploy:
         deploy:
             resources:
                 limits:
                     cpus: "3.0"
-                #resources:
-                #  limits:
-                #      cpus: '1.0'
-                #      memory: '32M'
         restart: always
-        # read_only: true
     encrypted:
         build: "./Reversing/Purple Socks"
         networks:
@@ -178,14 +144,10 @@ services:
             resources:
                 limits:
                     cpus: "3.0"
-                #resources:
-                #  limits:
-                #      cpus: '1.0'
-                #      memory: '32M'
         restart: always
         read_only: true
     extraordinary:
-        build: "./Cryptography/Easy - Extraordinary"
+        build: "./Cryptography/Extraordinary"
         networks:
             - default
         ports:
@@ -197,19 +159,6 @@ services:
                     memory: "32M"
         restart: always
         read_only: true
-    # pick_your_poison:
-    #     build: "./Cryptography/Medium - Pick Your Poison"
-    #     networks:
-    #             -  default
-    #     ports:
-    #             - "30031:30031"
-    #     deploy:
-    #         resources:
-    #             limits:
-    #                 cpus: '1.0'
-    #                 memory: '32M'
-    #     restart: always
-    #     read_only: true
     web1:
         build: ./Web/web1
         networks:
@@ -219,15 +168,8 @@ services:
         deploy:
             resources:
                 limits:
-                    cpus:
-                        "1.0"
-                        #deploy:
-                        #resources:
-                        #limits:
-                        #  cpus: '1.0'
-                        #  memory: '32M'
+                    cpus: "1.0"
         restart: always
-        # read_only: true
     web2:
         build: ./Web/web2
         networks:
@@ -237,15 +179,8 @@ services:
         deploy:
             resources:
                 limits:
-                    cpus:
-                        "1.0"
-                        #deploy:
-                        #resources:
-                        #limits:
-                        #  cpus: '1.0'
-                        #  memory: '32M'
+                    cpus: "1.0"
         restart: always
-        # read_only: true
     web3:
         build: ./Web/web3
         networks:
@@ -255,38 +190,5 @@ services:
         deploy:
             resources:
                 limits:
-                    cpus:
-                        "1.0"
-                        #deploy:
-                        #resources:
-                        #limits:
-                        #  cpus: '1.0'
-                        #  memory: '32M'
+                    cpus: "1.0"
         restart: always
-        # read_only: true
-#     web4:
-#             build: ./Web/web4
-#             networks:
-#                     - default
-#             ports:
-#                     - "30023:80"
-#             deploy:
-#                 resources:
-#                     limits:
-#                         cpus: '1.0'
-#                         memory: '32M'
-#             restart: always
-# read_only: true
-#     web5:
-#             build: ./Web/web5
-#             networks:
-#                     - default
-#             ports:
-#                     - "30024:80"
-#             deploy:
-#                 resources:
-#                     limits:
-#                         cpus: '1.0'
-#                         memory: '32M'
-#             restart: always
-# read_only: true

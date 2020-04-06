@@ -1,0 +1,11 @@
+Another RSA problem.
+
+This was originally meant to be a CCA attack on RSA, but could server constraints, and complications led to this problem.
+
+The way you can solve this problem is the bypass to the previous RSA problem.
+
+1. calculate the values of every ascii value by taking it's integer value and raising it to e mod n.
+
+2. find the corresponding values within the given ciphertext
+
+3. translate
