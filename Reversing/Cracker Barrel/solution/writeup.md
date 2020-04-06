@@ -16,6 +16,4 @@ Third check looks if the user input is `l33t hax0r`
 ## Alternate Solutions
 
 Turns out there was an unintended solution thanks to user KERRO on discord.
-Because I wrote bad code the second checks can be bypassed by simply entering an empty string.
-
-This occurs because I loop through the string and set a bad flag if the string does not match. However, this flag is initially set to 0 so if you never loop through the for loop you can't ever set it to bad.
+The first and second checks can be bypassed by simply entering an empty string.
