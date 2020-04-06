@@ -14,6 +14,7 @@ Finally find all the rows where rolled_back = 1
 ```SELECT * FROM co_block WHERE rolled_back = 1```
 
 Only one row meets those parameters and it has the unix timestamp of: 1581060905
+
 Insert the timestamp into the flag format. 
 
 Flag: auctf{1581060905}
