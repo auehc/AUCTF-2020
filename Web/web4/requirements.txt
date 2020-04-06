@@ -24,7 +24,7 @@ pycrypto==2.6.1
 pyftpdlib==1.5.6
 pyOpenSSL==17.5.0
 pyxdg==0.25
-PyYAML==3.12
+PyYAML==5.1
 requests==2.18.4
 SecretStorage==2.3.1
 six==1.11.0
