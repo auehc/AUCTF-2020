@@ -3,6 +3,9 @@
 ## Build Instructions
 
 Ensure docker and docker compose is installed on your box.
+
+We used docker-compose version 1.25 and docker 19.03.06
+
 Run `sudo ./build.sh` to build and bring up the boxes.
 Further runs can just use `sudo ./up.sh`
 
