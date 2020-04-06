@@ -9,7 +9,7 @@ Extract initrd.gz
 Extract the cpio archive
 ```cpio -idv < initrd```
 
-Flag is hidden as the 'cat' binary in /bin/ 
+Flag is hidden as the 'cat' binary in initrd's /bin folder
 ```cd /bin/ && cat ./cat```
 
 siica{rul_nbkf_vsrnog_vx}
