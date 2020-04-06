@@ -1,0 +1,10 @@
+Time to put your problem solving skills to work! Finish the sequence!
+
+NOTE: The flag is NOT in the standard auctf{} format
+
+
+4, 8, 15, _, _, _
+
+flag format - comma separated list 1, 2, 3
+
+author: c

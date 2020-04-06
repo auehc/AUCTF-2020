@@ -1,0 +1,5 @@
+This challenge has the user find the developers of the CTF, navigate to their github page and then find which developer made the challenge ('chharles').
+On their github page there is a repository AUCTF-2020 with a single file, 'README.md'
+If the user looks at the history of the file, they'll find the flag:
+
+auctf{G1tHuB_4lwAY5_r3mEmB3r5_8923_1750921}

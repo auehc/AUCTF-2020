@@ -1,0 +1,11 @@
+Time to put your problem solving skills to work! Finish the sequence!
+
+If you asc me, thisss looks pretty random.
+
+98, 107, 10, 66, 124, _, _, _, _, _
+
+NOTE: The flag is NOT in the standard auctf{} format
+
+flag format - comma separated list 1, 2, 3, 4, 5
+
+author: c

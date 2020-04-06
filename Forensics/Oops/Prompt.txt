@@ -1,0 +1,1 @@
+My friend chharles sent me this disk image. He said it won't mount properly and when he tried to convert it to an ISO and install it there were alot of errors. Can you see what's wrong?

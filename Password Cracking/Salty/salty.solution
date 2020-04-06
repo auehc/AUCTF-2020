@@ -1,0 +1,2 @@
+This was a salted MD5 hash. You need to make sure the inputted hash was in the proper hash:salt format.
+hashcat -a 0 -m 20 salty.hash rockyou.txt

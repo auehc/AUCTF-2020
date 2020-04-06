@@ -1,0 +1,30 @@
+This is a RSA problem focusing on small n factorization
+
+if the prime value p and q are too small, this results a factorable n. Because n is factorable the attacker can then calculate the decreyption exponent and decreypt all ciphertext transmitted between the given parties.
+
+1. Factor n to get the folowing primes:
+	n = p*q
+		n = 627585038806247
+		p = 13458281 
+		q = 46631887
+	
+2. calculate phi
+	phi = (p-1)*(q-1)
+	
+3. calculate d such that d*e is congruent with 1 mod phi
+	e = 65537
+	d = 119987789848673
+	
+4. decreypt the message:
+	c = ciphertext value
+	x = plaintext value
+	
+	c**d mod n = x
+	
+5. do this for all of the values
+
+6. convert int into ascii
+
+
+
+Alternatively, you can calculate the ciphertext values for every valid value within the ascii range, and then compare those values to the ciphertext:

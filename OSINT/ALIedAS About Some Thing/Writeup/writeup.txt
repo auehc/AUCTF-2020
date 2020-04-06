@@ -1,0 +1,12 @@
+The investigator is given the username or alias, AUCTFShh.
+
+From this, the user has to figure out more about the target. There are several ways to approach this task.
+The first way would be to iterate over every known social media account with that username, and determine if there is anything useful there. This is slow and cumbersome. Instead, the tool Sherlock automates this process for the investigator. From Sherlock results, or the results from another service like it, there are a few accounts with the given username.
+
+After looking at the different services with the given username, it appears that none of the accounts have anything useful on them except for one: Steam.
+
+On AUCTFShh, the investigator finds out that there the user changed names to youllneverfindmese. 
+Running Sherlock (or some other service) on this new alias results in a hit on Pastebin which has a link to a website with a flag on it.
+
+The flag ends up being:
+auctf{4li4s3s_w0nT_5t0p_m3_6722df34df}

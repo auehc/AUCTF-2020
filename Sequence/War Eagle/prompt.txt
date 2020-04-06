@@ -1,0 +1,9 @@
+Time to put your problem solving skills to work! Finish the sequence!
+
+101, 125, 102, 125, __, __, 40, 124, 111, 107, __, __, __
+
+NOTE: The flag is NOT in the standard auctf{} format
+
+flag format - comma separated list 1, 2, 3, 4, 5
+
+Author: FireKing

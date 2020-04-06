@@ -1,0 +1,15 @@
+In this problem, the investigator is  told that one of the developers may be stealing information from the company devs-r-us. The user must determine if this is true.
+
+To start with the investigator should go to the devs-r-us website, dev-r-us.xyz.
+
+Examining the source code shows csomething curious about the images. they appear to be the same image but are named two different things 'mcafee.png' and 'mcoffee.png'.
+
+Examining the metadata, the investigators should note a link to a discord channel as well as a message contained within the XMP description field 'https://discord.gg/pMzcE45 DM me if you want more info'.
+
+What the investigator may not know at this point is that this isn't the ONLY piece of embedded information on the website.
+
+Upon clicking the 'contact us' button of the main website, the browser is redirected to another webpage that looks almost identical; however, there is a hidden message on this new webpage with a password 'Who is Maddaddam?'.
+
+Following the discord link, the investigator is lead to the AUCTF server. They must then contact the user JG, or Jorge Greenwood, the web developer for devs-r-us.xyz. They must tell Jorge the password before he directs them to another Discord server that contians a single message embedded in the QR code of an image. The QR code redirects a persons browser to the following link: http://devs-r-us.xyz/ahsdbwgjkhb23tsdonoqw1892345bnew/flag.txt
+
+auctf{3X1F_D4TA_SH0UlD_B3_sTr1pp3d_2b23sadf}

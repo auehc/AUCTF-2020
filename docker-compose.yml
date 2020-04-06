@@ -1,0 +1,195 @@
+version: "3.3"
+
+# Ensure ASLR Is off!! echo 0 > /proc/sys/kernel/randomize_va_space
+# Run docker-compose with --compatibility switch
+# sudo docker-compose --compatibility up --build -d
+# sudo docker-compose --compatibility down
+services:
+    shell:
+        build: "./Pwn/Easy as Pie!"
+        networks:
+            - default
+        ports:
+            - "30010:30010"
+        deploy:
+            resources:
+                limits:
+                    cpus: "1.0"
+        restart: always
+        read_only: true
+    overwrite:
+        build: "./Pwn/Thanksgiving Dinner"
+        networks:
+            - default
+        ports:
+            - "30011:30011"
+        deploy:
+            resources:
+                limits:
+                    cpus: "1.0"
+        restart: always
+        read_only: true
+    house:
+        build: "./Pwn/House of Madness"
+        networks:
+            - default
+        ports:
+            - "30012:30012"
+        deploy:
+            resources:
+                limits:
+                    cpus: "1.0"
+        restart: always
+        read_only: true
+    indirection:
+        build: "./Pwn/Remote School"
+        networks:
+            - default
+        ports:
+            - "30013:30013"
+        deploy:
+            resources:
+                limits:
+                    cpus: "1.0"
+        restart: always
+        read_only: true
+    bash:
+        build: ./Bash
+        networks:
+            - default
+        ports:
+            - "30040:22"
+        deploy:
+            resources:
+                limits:
+                    cpus: "3.0"
+                    memory: "64M"
+        restart: always
+    crack:
+        build: "./Reversing/Cracker Barrel"
+        networks:
+            - default
+        ports:
+            - "30000:30000"
+        deploy:
+            resources:
+                limits:
+                    cpus: "3.0"
+        restart: always
+        read_only: true
+    interpret:
+        build: "./Reversing/Mr. Game and Watch"
+        networks:
+            - default
+        ports:
+            - "30001:30001"
+        deploy:
+            resources:
+                limits:
+                    cpus: "3.0"
+        restart: always
+        read_only: true
+    keygen:
+        build: "./Reversing/Sora"
+        networks:
+            - default
+        ports:
+            - "30004:30004"
+        deploy:
+            resources:
+                limits:
+                    cpus: "3.0"
+        restart: always
+        read_only: true
+    nodbg:
+        build: "./Reversing/Don't Break Me!"
+        networks:
+            - default
+        ports:
+            - "30005:30005"
+        deploy:
+            resources:
+                limits:
+                    cpus: "3.0"
+        restart: always
+        read_only: true
+    nested:
+        build: "./Reversing/Chestburster/challenge"
+        networks:
+            - default
+        ports:
+            - "30006:30006"
+        deploy:
+            resources:
+                limits:
+                    cpus: "3.0"
+        restart: always
+    nested_server:
+        build: "./Reversing/Chestburster/secret"
+        networks:
+            - default
+        ports:
+            - "30009:80"
+        deploy:
+            resources:
+                limits:
+                    cpus: "3.0"
+        restart: always
+    encrypted:
+        build: "./Reversing/Purple Socks"
+        networks:
+            - default
+        ports:
+            - "30049:30049"
+        deploy:
+            resources:
+                limits:
+                    cpus: "3.0"
+        restart: always
+        read_only: true
+    extraordinary:
+        build: "./Cryptography/Extraordinary"
+        networks:
+            - default
+        ports:
+            - "30030:30030"
+        deploy:
+            resources:
+                limits:
+                    cpus: "1.0"
+                    memory: "32M"
+        restart: always
+        read_only: true
+    web1:
+        build: ./Web/web1
+        networks:
+            - default
+        ports:
+            - "30020:80"
+        deploy:
+            resources:
+                limits:
+                    cpus: "1.0"
+        restart: always
+    web2:
+        build: ./Web/web2
+        networks:
+            - default
+        ports:
+            - "30021:80"
+        deploy:
+            resources:
+                limits:
+                    cpus: "1.0"
+        restart: always
+    web3:
+        build: ./Web/web3
+        networks:
+            - default
+        ports:
+            - "30022:80"
+        deploy:
+            resources:
+                limits:
+                    cpus: "1.0"
+        restart: always

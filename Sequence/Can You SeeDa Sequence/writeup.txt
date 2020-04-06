@@ -1,0 +1,17 @@
+This problem requires you to pull out revelevant information from the challenge description
+
+The title indicates a SeeD, this would lead you to believe the sequence has something to do with a pRNG. 
+
+
+If you asc me, thisss looks pretty random.
+pretty crypic, asc indicates ascii
+thisss, indicates python
+and pretty random  reassures us that random is in fact being used..
+
+import random 
+
+seq = [...]
+for i in range(10):
+	random.seed(i)
+	potential = [random.randint(0,128) for j in range(10)]
+	print(potential)

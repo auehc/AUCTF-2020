@@ -1,0 +1,3 @@
+Your SUBSTITUTE teacher accessed his copy of Fahrenheit 451 over his windows network share. Can you find the flag your friend hid in the book?
+
+Standard Flag Format auctf{}

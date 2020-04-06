@@ -1,100 +1,21 @@
 # AUCTF-2020
 
+## Build Instructions
+
+Ensure docker and docker compose is installed on your box.
+Run `sudo ./build.sh` to build and bring up the boxes.
+Further runs can just use `sudo ./up.sh`
+
 ## Categories
 
-### OSINT: Charlie
-
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
-
-### Crypto: Charlie
-
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
-
-### Misc: Ethan
-
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
-
-### BASH: DeMarcus
-
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
-
-### Reversing: Jordan / Kensocolo 
-
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
-
-### Pwn: Jordan / Kensoscolo
-
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
-
-### Web: DeMarcus
-
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
-
-
-### Pentesting: DeMarcus / Drew / Kensocolo
-
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
-
-### Forensics: Vincent
-
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
-
-### Password Cracking: Zach
-
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
-
-### Physical: Charlie
-
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
-
-### Signal: Drew
-
-* [ ]  Easy
-* [ ]  Easy
-* [ ]  Medium
-* [ ]  Medium
-* [ ]  Hard
+- OSINT
+- Crypto
+- Misc
+- BASH
+- Reversing
+- Pwn
+- Web
+- Forensics
+- Password Cracking
+- Signals
+- Sequence

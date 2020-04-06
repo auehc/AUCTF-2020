@@ -1,0 +1,7 @@
+Evelyn was snooping on some parking lot RF chatter when she noticed an interesting signal on a weird frequency. The provided link has a sample of the intercepted signal after it was cleaned up:
+
+https://cdn.discordapp.com/attachments/676467674783547432/695740859316174848/mystery_signal.wav
+
+Note: This flag does not follow the normal format
+
+Author: c

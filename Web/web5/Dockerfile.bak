@@ -1,0 +1,17 @@
+from php:7.0-apache
+
+run mkdir /var/www/html/cgi-bin
+copy .htaccess /usr/lib/cgi-bin
+copy index.html /var/www/html
+copy myscript /var/www/html/cgi-bin/myscript.sh
+
+run service apache2 start && echo "<Directory /var/www/html>" >> /etc/apache2/sites-available/000-default.conf && \
+  echo "Options Indexes FollowSymLinks" >> /etc/apache2/sites-available/000-default.conf && \
+  echo "AllowOverride All" >> /etc/apache2/sites-available/000-default.conf && \
+  echo "Require all granted" >> /etc/apache2/sites-available/000-default.conf && \
+  echo "Options +ExecCGI" >> /etc/apache2/sites-available/000-default.conf && \
+  echo "</Directory>" >> /etc/apache2/sites-available/000-default.conf && \
+ # echo "ScriptAlias \"/cgi-bin/\" \"/var/www/html/cgi-bin/\"" >> /etc/apache2/sites-available/000-default.conf && \
+  a2enmod rewrite && a2enmod cgi && service apache2 restart && chmod 755 /var/www/html && \
+  chmod 755 /var/www/html/* && chmod 755 /usr/lib/cgi-bin/* && chmod 755 /var/www/html/cgi-bin/
+expose 80

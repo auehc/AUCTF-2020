@@ -1,0 +1,9 @@
+Really, it comes down to figuring out what is being XORred with the input:
+To figure out the XOR value, input KNOWN plaintext values, p0. what you'll get is ciphertext c0 = p0 (xor) k0, where k0 is the value of the key.
+If the user inputs the same value into the function, they'll notice that the key does not change. You can figure out the key by taking the output of the stream of bytes and xorring it with the input that gave that message:
+
+p0 (XOR) c0 = p0 (XOR) p0 (XOR) k0 = k0 
+
+After that, they can convert the bytes into ascii which will give them the flag:
+
+auctf{n3v3R_r3Us3_y0uR_0Tp_872vc8972}
