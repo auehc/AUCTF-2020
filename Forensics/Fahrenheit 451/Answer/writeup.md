@@ -30,7 +30,7 @@ Check out this lookup table from https://rot47.net/:
 ```ROT47: 2F4E7L3FC?0E9603@@<DPP`PN```
 
 
-[Marshmellow's](https://github.com/xiongnemo) implementation in python:
+[Marshmallow's](https://github.com/xiongnemo) implementation in python:
 
 ```
 after = """!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~"""
