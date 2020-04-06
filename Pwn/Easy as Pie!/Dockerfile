@@ -1,7 +1,6 @@
 FROM ubuntu:latest
 
-RUN apt update
-RUN apt install -y socat python3 nano
+RUN apt-get update && apt-get install -y socat python3 nano
 RUN groupadd ctf
 
 RUN mkdir /pwn

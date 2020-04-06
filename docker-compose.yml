@@ -6,7 +6,7 @@ version: "3.3"
 # sudo docker-compose --compatibility down
 services:
     shell:
-        build: "./Pwn/Eas as Pie!"
+        build: "./Pwn/Easy as Pie!"
         networks:
             - default
         ports:
@@ -86,6 +86,7 @@ services:
         deploy:
             resources:
                 limits:
+                    cpus: "3.0"
         restart: always
         read_only: true
     keygen:

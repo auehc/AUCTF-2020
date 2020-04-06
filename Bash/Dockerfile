@@ -29,7 +29,7 @@ run chown level3:level2 /home/level2/random_dirs.sh && chmod 550 /home/level2/ra
   && chown root:root /home/level5/flag.txt && chown root:level5 /home/level5/portforce.sh \
   && chmod 440 /home/level5/flag.txt && chmod 550 /home/level5/portforce.sh \
   && chmod 2550 /home/level5/level5_runner && chmod -w /home/* &&  rm /home/*/*.c \
-  && rm /home/*/*_runner && chown root:root /home/* 
+  && rm /home/*/*_runner && chown root:root /home/*
 
 expose 22
 cmd ["/usr/sbin/sshd", "-D"]
