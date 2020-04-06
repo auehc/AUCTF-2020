@@ -19,3 +19,7 @@ Further runs can just use `sudo ./up.sh`
 - Password Cracking
 - Signals
 - Sequence
+
+## Alternate Solutions
+
+If you have a cool alternate solution feel free to submit a pull request!
