@@ -1,0 +1,5 @@
+The .wav file contains an file encoded with 8PSK500.
+http://www.w1hkj.com/FldigiHelp-3.21/Modes/index.htm can help with identifying the mode being used.
+Once decoded, you should be able to see the header of the transmission. One field "Program" is set to FLAMP.
+This indicates that the FLAMP program is needed to handle saving the file.
+The file is a .png image that contains a bad drawing of the flag: auctf{M5_PANT}

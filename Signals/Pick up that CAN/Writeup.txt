@@ -1,0 +1,24 @@
+The flag is embedded within CAN bus packets as hexiddecimal values that 
+	correspond to ASCII characters.
+There are 3 ID numbers of interest: 3, 4, and 5. The can-util package can be 
+	used to play back the log and observe the packets in a human-readable format.
+canplayer is used for playback and cansniffer is used for observation.
+To use these, a CAN interface must be set up. The provided bash script creates 
+	an interface called vcan0.
+Executing "cansniffer vcan0" after setting up the interface starts the 
+	observation.
+Executing "canplayer -I <log filename> vcan0=can0" starts replaying the CAN 
+	traffic on the vcan0 interface*.
+cansniffer should now start displaying CAN ID numbers that change, the current 
+	data on them, and the ASCII decoded version.
+In the ASCII section of the screen, the flag should appear near the top.
+The flag is: auctf{ImTheTrashMan}
+
+
+
+*This is different from the normal sender-receiver protocols such as TCP/IP as 
+	the only "address" on each packet is the ID number. cansniffer lists each
+	ID number on a single line, followed by the most recent data sent with that
+	ID. If an ID does not get any new data, it will dissapear from the screen.
+	By default, it takes 5 seconds of no updates, but the -t flag can be used
+	with cansniffer to change this.

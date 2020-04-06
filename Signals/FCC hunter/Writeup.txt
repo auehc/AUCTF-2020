@@ -1,0 +1,7 @@
+The point of this challenge is to teach how to find information using the FCC databases.
+One method of solving this is to find: https://fjallfoss.fcc.gov/General_Menu_Reports/engineering_search.cfm?accessible=NO
+Searching for AL, Lee county, and "First Transit" as the Licensee Name and checking the wildcard box will show the FCC entry on Tiger Transit.
+Looking through this entry will reveal 3 allocations: 2 on 462.025 and 1 on 467.025
+462.025 is the frequency used by the buses, so the flag is auctf{462.025}
+
+A much easier method is to Google "auburn tiger transit radio frequency". The first result is https://www.radioreference.com/apps/db/?ctid=41

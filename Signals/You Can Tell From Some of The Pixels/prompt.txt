@@ -1,0 +1,3 @@
+The .wav file is a recording of a captured transmission between two HAM radio operators. Given the large bandwidth and length of transmission, it is suspected that this is a file transfer.
+
+Author: JohnsonJangler

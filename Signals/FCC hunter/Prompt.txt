@@ -1,0 +1,5 @@
+The flag is the frequency used by Auburn University's Tiger Transit system for their radios in each bus. This will also test your OSINT skills.
+
+Flag format: auctf{xxx.xxx} where each "x" is a digit.
+
+Author: JohnsonJangler

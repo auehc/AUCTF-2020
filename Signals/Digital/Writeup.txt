@@ -1,0 +1,6 @@
+The .wav file contains a audio of some digital sounding thing. This actually a BPSK63 recording of the flag.
+The flag is encoded with BPSK63. BPSK is a common digital mode for amateur radio operators, a method for sending digital data over an analog (audio) radio.
+63 refers to the bit rate and bandwidth, and can be recognized if the signal can be viewed on a waterfall plot.
+Digital modes can also be identified by how they sound, similar to how most people can recognize the sound of a dial-up modem. The sound of the .wav file can be compared to samples on-line. http://www.w1hkj.com/FldigiHelp-3.21/Modes/index.htm is a good library of HAM/amateur radio digital modes.
+FLDIGI is my software of choice for digital modes, but there are other programs that can do the same thing.
+In FLDIGI, setting the mode to BPSK63 and playing back the .wav file will reveal the flag: auctf{bigger_number_equals_more_better}
