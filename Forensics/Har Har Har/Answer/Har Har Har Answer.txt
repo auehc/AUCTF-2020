@@ -1,4 +1,0 @@
-There is an image in the http stream that is base64 encoded.
-
-Get the image by copying the base64 text from the first response to a file (base64txt in this answer) and running the following:
-base64 --decode base64txt > har.png
