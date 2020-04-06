@@ -5,9 +5,11 @@ Extract the .gz file to reveal a sql dump, inside the table there is a .7z file 
 
 ```mysql -u user -p'fdsafds' -e "USE test; SELECT image FROM images INTO DUMPFILE '/tmp/boom';"```
 
-Alot of people where having trouble with this because they either redirected the output like this 
+Alot of people where having trouble with this because they either redirected the output without the --raw flag. 
 
 ```"select image from images;" > flag.7z,```
+
+
 
 or used into outfile like this
 
