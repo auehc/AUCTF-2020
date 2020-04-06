@@ -1,1 +1,3 @@
 1366, 1368, 1374, 1378, 1380
+
+subtract 1337 from each one and go down the prime numbers
