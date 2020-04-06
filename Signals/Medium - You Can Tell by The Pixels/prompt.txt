@@ -1,2 +1,0 @@
-The .wav file is a recording of a captured transmission between two amateur radio operators. Given the large bandwidth and length of transmission, it is suspected that this is a file transfer.
-http://www.w1hkj.com/FldigiHelp-3.21/Modes/index.htm
