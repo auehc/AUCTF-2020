@@ -1,1 +1,3 @@
 71, 12, 154, 14, 15
+
+Index the numbers starting at 0 then on each non prime index the number is the current index. Each prime index add every number previous to get the number for the prime index.
