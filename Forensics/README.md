@@ -1,4 +1,4 @@
-# AUCTF-2020 Forensics
+# AUCTF-2020 Forensics by Vincent
 
 Online Only CTF put on by members of the [Auburn University Ethical Hacking Club](https://ehc.auburn.edu) held at: https://ctf.auburn.edu/ 
 
