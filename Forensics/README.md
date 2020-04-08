@@ -13,6 +13,8 @@ All Forensics: https://ah-sayed.github.io/posts/auctf-2020
 
 Fahrenheit 451: https://bigpick.github.io/TodayILearned/articles/2020-04/auctf_writeups#fahrenheit-451
 
+Fahrenheit 451: https://whiteheadsoftware.dev/monsec-ctf-writeup/ (Bottom of the page)
+
 Boom: https://tipi-hack.github.io/2020/04/06/AUCTF-20-Boom.html
 
 Block2: https://reloadedhacks.com/hacking/auctf-2020-block-2-writeup/
@@ -22,6 +24,8 @@ Block2: https://imgur.com/nkTzPVi
 Har Har Har: https://bigpick.github.io/TodayILearned/articles/2020-04/auctf_writeups#har-har-har
 
 Har Har Har: https://github.com/SinHackTeam/writeup/blob/master/AUCTF%202020/Forensics/Har_Har_Har-volken-writeup.pdf
+
+Har Har Har: https://whiteheadsoftware.dev/monsec-ctf-writeup/ (Bottom of the page)
 
 Animal Crossing: https://tipi-hack.github.io/2020/04/06/AUCTF-20-Animal_Crossing.html
 
