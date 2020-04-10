@@ -1,2 +1,2 @@
-This was a SHA3-515 hash.
+This was a SHA3-512 hash.
 hashcat -a 0 -m 17600 hash rockyou.txt
