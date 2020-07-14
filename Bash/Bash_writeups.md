@@ -21,6 +21,8 @@ a script that expects a passcode to print the file. We can write a quick brute
 force script with the following `while [[ 1 == 1 ]];do echo '0' | sudo -u level4 ./passcodes.sh; done | grep auctf`.
 This may take a while to run, but should print our flag when it guesses correctly.
 
+Unintended solution: just input `x`, as `$input` equals with `$x`.
+
 ## BASH 4
 This box is very easy. Log in with `level4`. We can see that the `level4` can execute a script that calls
 cat. We can print out the flag by running `sudo -u level5 ./print_file.sh`
