@@ -13,7 +13,7 @@ functools32==3.2.3.post2
 idna==2.6
 ipaddress==1.0.17
 itsdangerous==1.1.0
-Jinja2==2.11.1
+Jinja2==2.11.3
 jsonschema==2.6.0
 keyring==10.6.0
 keyrings.alt==3.0
